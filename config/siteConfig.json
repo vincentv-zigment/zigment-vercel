@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "meta_author": "Wealcoder",
+    "meta_image": "",
+    "meta_description": "Sassly Landing Page"
+  },
+
+  "site_info": {
+    "title": "Sassly",
+    "base_url": "",
+    "logo": "/assets/imgs/logo/logo.png",
+    "logo_light": "/assets/imgs/logo/logo-light.png",
+    "logo_icon": "/assets/imgs/logo/logo-icon.png",
+    "logo_width": 115,
+    "logo_height": 32,
+    "logo_text": "Sassly"
+  },
+
+   
+
+  "social": [
+    {
+      "name": "Fb",
+      "link": "https://www.facebook.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Tw",
+      "link": "https://twitter.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "In",
+      "link": "https://www.instagram.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Db",
+      "link": "https://dribbble.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Li",
+      "link": "https://www.behance.net/",
+      "value": "750,000"
+    }
+  ]
+}
