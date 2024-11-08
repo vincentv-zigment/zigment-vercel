@@ -1,20 +1,21 @@
-import React, { MutableRefObject, useEffect, useRef, useState } from "react";
+import React, {  useEffect, useRef, useState } from "react";
 import { Oval, ThreeDots } from "react-loader-spinner";
 import moment from "moment";
 import {
   convertToImageArray,
-  getAllImageUrls,
   getFirstUrl,
   isImageUrl,
 } from "./chat-bot-utils";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { CompanyDataI } from "./ChatRightAway";
 import MediaViewer from "../media-viewer";
+import Image from "next/image";
 
 type Props = {
   loading: boolean;
   companyData: CompanyDataI;
   showTypingIndicator: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   messages: any[];
   open: boolean;
 };
@@ -47,14 +48,7 @@ const ChatBotMessageSection = ({
     }
   }, [messages]);
 
-  const renderTextAsHtml = (text: string) => {
-    const urlRegex =
-      /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/gi;
-    return text.replace(
-      urlRegex,
-      (url) => `<a href="${url}" target="_blank">${url}</a>`
-    );
-  };
+   
 
   const parseTextWithUrls = (text: string) => {
     const urlRegex =
@@ -128,7 +122,7 @@ const ChatBotMessageSection = ({
             <>
               <div className="w-full flex items-end gap-3 justify-start">
                 <div className="w-8 h-8 shrink-0 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden mb-2">
-                  <img src={'/zigment_thumbnail_logo_black.svg'} className="p-[6px]" alt="" />
+                  <Image width={500} height={500} src={'/zigment_thumbnail_logo_black.svg'} className="p-[6px]" alt="" />
                 </div>
                 <div className="w-full">
                   <p
@@ -142,7 +136,9 @@ const ChatBotMessageSection = ({
               <div className="w-full flex items-start gap-2 justify-start">
                 <div className="">
                   <div className="w-8 h-8 opacity-0 shrink-0 bg-gray-200 flex items-center justify-center rounded-full overflow-hidden">
-                    <img
+                    <Image
+                      width={500}
+                      height={500}
                       src={companyData.data.logo_url}
                       className="p-1"
                       alt=""
@@ -163,7 +159,9 @@ const ChatBotMessageSection = ({
                   <>
                     <div className="w-full flex items-end gap-3 justify-start">
                       <div className="w-8 h-8 shrink-0 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden mb-2">
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src={`/zigment_thumbnail_logo_black.svg`}
                           className="p-[6px]"
                           alt=""
@@ -190,7 +188,9 @@ const ChatBotMessageSection = ({
                                     key={index}
                                     className="flex flex-col items-center justify-start w-[240px] shrink-0 h-[240px] border rounded-lg overflow-hidden"
                                   >
-                                    <img
+                                    <Image  
+                                      width={500}
+                                      height={500}
                                       src={item}
                                       alt={item}
                                       className="w-full h-full object-cover"
@@ -242,7 +242,9 @@ const ChatBotMessageSection = ({
                     <div className="w-full flex items-start gap-2 justify-start">
                       <div className="">
                         <div className="w-8 h-8 opacity-0 shrink-0 bg-gray-200 flex items-center justify-center rounded-full overflow-hidden">
-                          <img
+                          <Image
+                            width={500}
+                            height={500}
                             src={`/zigment_logo_Vector.png`}
                             className="p-1"
                             alt=""
@@ -286,7 +288,9 @@ const ChatBotMessageSection = ({
             <>
               <div className="w-full flex items-end gap-3 justify-start">
                 <div className="w-8 h-8 shrink-0 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden mb-2">
-                  <img
+                  <Image
+                    width={500}
+                    height={500}
                     src={`/zigment_logo_Vector.png`}
                     className="p-1"
                     alt=""
@@ -313,7 +317,9 @@ const ChatBotMessageSection = ({
               <div className="w-full flex items-start gap-2 justify-start">
                 <div className="">
                   <div className="w-8 h-8 opacity-0 shrink-0 bg-gray-200 flex items-center justify-center rounded-full overflow-hidden">
-                    <img
+                    <Image  
+                      width={500}
+                      height={500}
                       src={`/zigment_logo_Vector.png`}
                       className="p-1"
                       alt=""

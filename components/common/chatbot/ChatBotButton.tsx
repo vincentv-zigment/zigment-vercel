@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Oval } from 'react-loader-spinner';
 import { CompanyDataI } from './ChatRightAway';
+import Image from 'next/image';
 
 type Props = {
   open: boolean,
@@ -12,8 +13,7 @@ type Props = {
 const ChatBotButton = ({ open, setLoading, companyData, setOpen }: Props) => {
   // Define a common base style for the buttons to reduce repetition
   const buttonBaseStyle = "flex items-center justify-center w-12 h-12 mt-2 rounded-full hover:scale-110 transition-all active:scale-90 relative shadow-lg"; // Added shadow-lg for shadow
-  let bubble_icon_url =  "Zigment_logo-05.svg";
-  let bubble_background_color = 'black';
+  const bubble_background_color = 'black';
   return (
     <div className="flex items-center justify-end">
       {!open && (
@@ -44,7 +44,7 @@ const ChatBotButton = ({ open, setLoading, companyData, setOpen }: Props) => {
             />
           ) : (
             // Ensure the img tag does not disrupt flex centering, consider adding specific classes if needed
-            <img className="p-1" src={'/zigment_logo_Vector.png'} alt="Chat" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} /> // Centered and constrained to button size
+            <Image width={500} height={500} className="p-1" src={'/zigment_logo_Vector.png'} alt="Chat" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} /> // Centered and constrained to button size
           )}
         </button>
       )}
@@ -72,7 +72,7 @@ const ChatBotButton = ({ open, setLoading, companyData, setOpen }: Props) => {
           />
         ) : (
           // Same adjustments for the image as above
-          <img className="p-1" src={'/zigment_thumbnail_white.png'} alt="Chat" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} /> // Centered and constrained to button size
+          <Image width={500} height={500} className="p-1" src={'/zigment_thumbnail_white.png'} alt="Chat" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} /> // Centered and constrained to button size
         )}
       </button>
     </div>

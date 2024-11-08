@@ -2,6 +2,7 @@ import { ClockIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import React, { Dispatch, SetStateAction } from 'react'
 import fontColorContrast from 'font-color-contrast'
 import { CompanyDataI } from './ChatRightAway'
+import Image from 'next/image'
 
 type Props = {
     companyData:CompanyDataI
@@ -21,7 +22,9 @@ const ChatBotnavbar = ({
 
                     <div className="flex gap-2 p-1   items-center">
                         <div className="flex -space-x-2    justify-center overflow-hidden">
-                            <img
+                            <Image
+                                width={100}
+                                height={100}
                                 className="inline-block p-2 h-[40px] w-[40px] rounded-full bg-black   "
                                 src={'/zigment_thumbnail_white.png'}
                                 alt=""

@@ -17,17 +17,7 @@ export const getAllImageUrls = (text: string) => {
     return matches.filter(url => imageExtensions.some(extension => url.toLowerCase().endsWith(extension)));
 };
 
-const sample = {
-    "_id": "1727950462-4dc9f36d-6e50-4c68-8bc9-ef9c374d1cb3",
-    "timestamp": 1727691374,
-    "role": "assistant",
-    "content": "Certainly. Here are the links to preview our rooms: Bathroom: https://i.ibb.co/tH02Kct/lonql-bathroom-3106-hor-clsc.jpg Suite: https://i.ibb.co/K6ZQ5tS/lonql-suite-3104-hor-clsc.jpg",
-    "mime_type": "",
-    "url": "",
-    "channel": "WEBCHAT",
-    "admin_read_message": false,
-    "translated_content": "Certainly. Here are the links to preview our rooms: Bathroom: https://i.ibb.co/tH02Kct/lonql-bathroom-3106-hor-clsc.jpg Suite: https://i.ibb.co/K6ZQ5tS/lonql-suite-3104-hor-clsc.jpg"
-}
+ 
 
 export function convertToImageArray(content: string): string[] {
   const regex = /(https:\/\/i\.ibb\.co\/[^\s]+)/g;

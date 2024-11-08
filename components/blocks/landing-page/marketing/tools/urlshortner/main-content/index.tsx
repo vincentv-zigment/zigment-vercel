@@ -47,11 +47,11 @@ const MainContent = () => {
       }
   
       try {
-        const { data } = await axiosWithoutAuth.post("/common-services/shorten-url", {
+        const { data }: { data: { unique_key: string, created_timestamp: string, password: string } } = await axiosWithoutAuth.post("/common-services/shorten-url", {
           url,
           perma_link: true
         });
-  
+      
         const newLink: LinkHref = {
           id: Date.now().toString(),
           title: "Default Title", // Use a default title if none provided
@@ -60,12 +60,10 @@ const MainContent = () => {
           createdAt: new Date(data.created_timestamp).toISOString(),
           totalClicks: 0,
           password: data.password
-  
         };
         setLinks([...links, newLink]);
         setUrl("");
-  
-  
+      
       } catch (err) {
         console.error(err);
         setError("Failed to generate a short link");
@@ -74,7 +72,7 @@ const MainContent = () => {
       }
     };
   
-    const removeLinkById = (id: any) => {
+    const removeLinkById = (id: string) => {
       setLinks(links.filter((link) => link.id !== id));
     };
   
