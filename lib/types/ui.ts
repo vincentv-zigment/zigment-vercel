@@ -22,19 +22,7 @@ export enum MessageType {
 }
 
 
-export interface OrgAgentMediaFiles {
-  _id?: any;
-  org_id?: string
-  id?: string
-  file_name: string;
-  file_url: string;
-  file_mime_type: string;
-  file_type: 'audio' | 'video' | 'image' | 'document' | 'sticker';
-  tags: string[];
-  description: string;
-  created_at_timestamp: number;
-  updated_at_timestamp: number;
-}
+ 
 
 export interface Detail {
   unix_timestamp: number;
@@ -113,16 +101,7 @@ export enum ChatChannelType {
   WEBCHAT = 'WEBCHAT',
   SAME_CHANNEL = 'SAME_CHANNEL',
 }
-export interface MessageTemplateResponseType {
-  org_id?: string;
-  template_name: string;
-  template_type: MessageTemplateType;
-  status: string;
-  components: any[];
-  assigned_number_or_id: string;
-  id: string;
-  template_data: MessageTemplateData;
-}
+ 
 export interface MessageTemplateData {
   category: string;
   allow_category_change: boolean;
@@ -292,80 +271,11 @@ export interface DashboardData {
   [key: string]: number
   // Add more fields as needed
 }
-export type OrgAgentDataTypes = {
-  
-  _id: string;
-  title: string;
-  description: string;
-  agent_use_case_id: string;
-  is_sms_enabled: boolean;
-  is_whatsapp_enabled: boolean;
-  is_instagram_enabled: boolean;
-  is_fb_messenger_enabled: boolean;
-  is_email_enabled: boolean;
-  assigned_fb_messenger_id: string;
-  is_voice_enabled: boolean;
-  is_website_chat_enabled: boolean
-  website_messages_delay: number | string;
-  fb_messages_delay: number | string;
-  ig_messages_delay: number | string;
-  whatsapp_messages_delay: number | string;
-  split_test_data: SplitTestData[];
-  sms_messages_delay: number | string;
-  assigned_sms_number: string;
-  assigned_whatsapp_number: string;
-  automated_meeting_reminders_enabled: boolean;
-  assigned_instagram_id: string;
-  assigned_email_id: string;
-  assigned_voice_number: string;
-  assigned_website_chat_widget_id: string;
-  status: string;
-  contacts_count?: number;
-  custom_values: any;
-  main_agent_data: MainAgentData;
-  is_agent_live?: boolean;
-  multilingual_enabled?:boolean,
-  multi_modal_enabled?:boolean,
-  org_agent_media_files?:OrgAgentMediaFiles[]  
+ 
+ 
 
 
-}
-export interface ContactTypes {
-  _id: string;
-  full_name: string;
-  email: string;
-  phone: string;
-  stop_ai_processing?: boolean;
-  stop_ai_processing_override?:boolean;
-  notes?: string;
-  status: string;
-  contact_stage?: string;
-  created_at_timestamp?: number;
-  updated_at_timestamp?: number;
-  org_agent_id?: string;
-  additional_info?: any;
-  is_archived?: boolean;
-  tags: ContactTags[];
-  meta_contact_referral?: any;
-  google_contact_referral?: any;
-  source?: string;
-  total_messages:number;
-  instagram_profile_details?:IntagramUserProfile;
-  fb_messenger_id?:string;
-  channels?: string[];
-  org_agent_version?:string;
-  org_agent_variant?:string;
-}
-
-
-interface IntagramUserProfile {
-  username: string;
-  full_name: string;
-  profile_picture_url: string;
-  follower_count: number;
-  is_user_follow_business: boolean;
-  is_business_follow_user: boolean;
-}
+ 
 
 export enum Marketing_Lead_Source {
   CONTACT_US = 'CONTACT_US',
@@ -381,26 +291,7 @@ export interface ContactTags {
   color: string;
 };
 
-export enum ContactSource {
-  GOOGLE_AD = 'GOOGLE_AD',
-  META_AD = 'META_AD',
-  TIKTOK_AD = 'TIKTOK_AD',
-  LINKEDIN_AD = 'LINKEDIN_AD',
-  OUTBOUND_CALL = 'INBOUND_CALL',
-  INBOUND_CALL = 'INBOUND_CALL',
-  INBOUND_FACEBOOK = 'INBOUND_FACEBOOK',
-  INBOUND_INSTAGRAM = 'INBOUND_INSTAGRAM',
-  INBOUND_TIKTOK = 'INBOUND_TIKTOK',
-  INBOUND_LINKEDIN = 'INBOUND_LINKEDIN',
-  INBOUND_WHATSAPP = 'INBOUND_WHATSAPP',
-  INBOUND_SMS = 'INBOUND_SMS',
-  INBOUND_EMAIL = 'INBOUND_EMAIL',
-  INBOUND_WEBCHAT = 'INBOUND_WEBCHAT',
-  WEBSITE_FORM = 'WEBSITE_FORM',
-  IMPORT = 'IMPORT',
-  MANUAL = 'MANUAL',
-  OTHER = 'OTHER',
-}
+ 
 
 
 export interface phoneNumberTypes {

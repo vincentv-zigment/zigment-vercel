@@ -1,29 +1,11 @@
 import axios from "axios";
-import axiosAPIWithAuth from "./axiosAPIWithAuth";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-export async function getPresignedUrl(
-  fileName: string,
-  contentType: string
-): Promise<{
-  url: string;
-  key: string;
-  public_url: string | null;
-}> {
-  const response = await axiosAPIWithAuth.post(
-    "/data-storage/get-presigned-url",
-    {
-      fileName,
-      contentType,
-    }
-  );
-
-  return response.data;
-}
-
+ 
 export async function uploadToS3(presignedUrl: string, file: Blob) {
   const result = await axios.put(presignedUrl, file, {
     headers: {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -9,8 +10,8 @@ export default function hasPinContent(
   start?: string,
   dWidth: number = 991
 ) {
-  let device_width = window.innerWidth;
-  let startFrom = start || "top top";
+  const device_width = window.innerWidth;
+  const startFrom = start || "top top";
 
   if (element && device_width > dWidth) {
     return gsap.to(element, {

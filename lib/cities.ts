@@ -1,5 +1,5 @@
 export type citiesDataType = {
-	id:any,
+	id:number | string,
 	city:string, 
 	state:string
 }

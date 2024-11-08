@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // GSAP Plugins
 
 export const ScrollSmoother = require("../../../public/assets/gsap-plugins/ScrollSmoother.js");

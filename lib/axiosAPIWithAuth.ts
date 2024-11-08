@@ -13,7 +13,7 @@ const isSessionStorageAvailable = () => {
     sessionStorage.setItem(testKey, testKey);
     sessionStorage.removeItem(testKey);
     return true;
-  } catch (e) {
+  } catch {
     return false;
   }
 };

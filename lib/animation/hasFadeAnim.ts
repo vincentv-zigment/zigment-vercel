@@ -11,7 +11,7 @@ type AnimationSetting = {
   y?: string | number;
   x?: string | number;
   scrollTrigger?: {
-    trigger: any;
+    trigger: Element;
     start: string;
   };
 };
