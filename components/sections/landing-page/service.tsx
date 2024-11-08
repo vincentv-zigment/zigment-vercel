@@ -25,24 +25,24 @@ const contentArray = [
     title: "Lead Ad Campaigns",
     short_description:
       "Engage your audience from Meta & Google Ads. Leadcard campaigns or CTWA",
-    image: `/assets/imgs/workflow-section/icon-s-322.png`,
+    image: `/assets/imgs/workflow-section/lead_ad_campaign.svg`,
   },
   {
     title: "Website Visitors",
     short_description:
       "Engage, Qualify & Convert your website visitors into customers",
-    image: `/assets/imgs/workflow-section/icon-s-291.png`,
+    image: `/assets/imgs/workflow-section/website_visitors.svg`,
   },
   {
     title: "Social Audience",
     short_description: "Instantly engage your social media fans from comments or DMs",
-    image: `/assets/imgs/workflow-section/icon-s-313.png`,
+    image: `/assets/imgs/workflow-section/social_audience.svg`,
   },
   {
     title: "Print & TV Media",
     short_description:
       "Start a conversation from a QR code or a number on packaging, a print Ad or a TV / video ad",
-    image: `/assets/imgs/workflow-section/icon-s-30.png`,
+    image: `/assets/imgs/workflow-section/print_tv_media.svg`,
   },
   
 ];
@@ -70,7 +70,7 @@ const LeadConversion = () => {
     <section className="sec_space1">
       <div className="container bg-white" ref={containerRef}>
         <div
-          className="flex justify-between flex-col xl:flex-row-reverse  gap-x-[20px] gap-y-[40px]"
+          className="flex  justify-between flex-col xl:flex-row-reverse  gap-x-[100px] gap-y-[40px]"
           ref={pinArea}
         >
           <div className="w-full" ref={pinElement}>
@@ -107,7 +107,7 @@ to social media to messenger apps. And your Google / Meta Ads too`}
               {contentArray.map((service) => (
                 <div
                   key={service.title}
-                  className="border-s border-border has_fade_anim bg-white py-[25px] md:p-0"
+                  className="border-s border-border has_fade_anim py-[25px] md:p-0"
                 >
                   <ServiceCard6
                     service={{

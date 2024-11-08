@@ -1,13 +1,13 @@
 import axiosWithoutAuth from "@/lib/axiosAPIwithoutAuth";
 import { classNames } from "@/lib/common";
 import { useEffect, useState } from "react";
- 
 import Head from "next/head";
 import React from "react";
 import ChatBotnavbar from "../chatbot/ChatBotnavbar";
 import ChatBotMessageSection from "../chatbot/ChatBotMessageSection";
 import ChatBottomBar from "../chatbot/ChatBottomBar";
 import ChatBotButton from "../chatbot/ChatBotButton";
+import { useChatBotTrigger } from "./ChatBotTriggerContext";
 
 export interface WebChatSessionData {
   widget_id: string;
@@ -46,6 +46,7 @@ const ChatBotV2 = ({
 }) => {
   const [open, setOpen] = useState(init);
   const [loading, setLoading] = useState(false);
+  const { triggerMessage, setTriggerMessage } = useChatBotTrigger();
 
   const [companyData, setCompanyData] = useState<CompanyDataI>({
     error: "",
@@ -172,8 +173,8 @@ const ChatBotV2 = ({
         const newMessages = response.data;
         // Update your state with new messages
         setMessages((prevMessages) => {
-          if ((newMessages as typeof messages).length > prevMessages.length) {
-            return [...(newMessages as typeof messages)];
+          if (newMessages.length > prevMessages.length) {
+            return [...newMessages];
           }
           return prevMessages;
         });
@@ -212,8 +213,8 @@ const ChatBotV2 = ({
         const newMessages = response.data;
         // Use functional update to access the latest state
         setMessages((prevMessages) => {
-          if ((newMessages as typeof messages).length > prevMessages.length) {
-            return [...(newMessages as typeof messages)];
+          if (newMessages.length > prevMessages.length) {
+            return [...newMessages];
           }
           return prevMessages;
         });
@@ -239,7 +240,7 @@ const ChatBotV2 = ({
             `/webchat/settings/${widget_id}`
           );
           // return data.data
-          setCompanyData({ error: null, data: data as CompanyDataI['data'], loading: false });
+          setCompanyData({ error: null, data, loading: false });
         } catch (error) {
           setCompanyData({
             error: "Invalid Website",
@@ -260,6 +261,20 @@ const ChatBotV2 = ({
       );
     }
   }, [messages]);
+
+  useEffect(() => {
+    if (triggerMessage) {
+      setOpen(triggerMessage.open);
+      // setMessages((prevMessages) => [
+      //   ...prevMessages,
+      //   {
+      //     _id: prevMessages.length + 1,
+      //     role: "user",
+      //     content: triggerMessage.message,
+      //   },
+      // ]);
+    }
+  }, [triggerMessage]);
 
   return (
     <div
@@ -289,7 +304,6 @@ const ChatBotV2 = ({
             }`}
           >
             {/* Chat Navbar */}
-
             <ChatBotnavbar companyData={companyData} setOpen={setOpen} />
 
             {/* Chats */}

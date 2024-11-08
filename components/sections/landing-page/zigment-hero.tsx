@@ -23,6 +23,7 @@ import { MdOutlineTimer3 } from "react-icons/md";
 import { RiGlobalLine } from "react-icons/ri";
 import Signup from "@/components/signup";
 import Signin from "@/components/signin";
+import { useRouter } from "next/router";
 
 type Props = {
   hero: {
@@ -57,18 +58,18 @@ type Props = {
 const contentArray = [
   {
     title: 'Alpha-Intelligence',
-    description: 'Drive human-like interactions and workflow actions with Zigment AI agents',
-    logo:LuBrainCircuit 
+    description: 'Drive human-like interactions and workflow actions',
+    logo:'/assets/imgs/hero/alpha_intelligence.svg' 
   },
   {
     title: 'Under 3 Seconds',
-    description: 'Instantly engage, nurture and drive sales motion with your prospects',
-    logo:MdOutlineTimer3 
+    description: 'Instantly engage, nurture and drive sales motion',
+    logo:'/assets/imgs/hero/under_3s.svg' 
   },
   {
     title: 'Everywhere',
-    description: 'Engage across all your business touchpoints including Website & social media',
-    logo:RiGlobalLine 
+    description: 'Engage across all business touchpoints - web, social, sms',
+    logo:'/assets/imgs/hero/everywhere.svg' 
 
   }
 ];
@@ -81,6 +82,7 @@ const ZigmentHero = (   ) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null!);
+  const router = useRouter()
 
   useGSAP(
     () => {
@@ -97,9 +99,7 @@ const ZigmentHero = (   ) => {
     setIsOpen2(!isOpen2);
   };
 
-  const closeDialog = () => {
-    setIsOpen(!isOpen);
-  };
+ 
   return (
     <>
       <section className="pt-[150px] lg:pt-[155px] xl:pt-[240px] pb-[50px] xl:pb-[100px] text-center bg-[url('/assets/imgs/background/bg.png')] bg-no-repeat bg-[#F9F6ED] bg-cover">
@@ -124,9 +124,9 @@ const ZigmentHero = (   ) => {
                 </h1>
               </div>
             </div>
-            <div className="pb-[20px] md:pb-[43px] w-full max-w-4xl mx-auto">
+            <div className="pb-[20px] md:pb-[43px] w-full max-w-5xl mx-auto">
               <p
-                className="text-[16px] md:text-[20px] text-primary leading-[1.36] has_fade_anim"
+                className=" text-[24px]    text-primary leading-[1.36] has_fade_anim"
                 data-delay="0.45"
               >
                 {`Zigment nurtures every customer individually.  It works across all your conversation 
@@ -137,15 +137,19 @@ channels like web-chat, SMS, Email or even social. It’s part tech, part magic.
               className="flex justify-center gap-[20px] has_fade_anim"
               data-delay="0.60"
             >
-              <Button variant="primary2" onClick={() => setIsOpen3(true)}>
-                Signup now
+              <Button variant="primary2" onClick={() =>  {
+                router.push('/contact-us')
+              }}>
+                Talk to us
               </Button>
               <Button
                 variant="outline"
                 className="rounded-full border-[#07203214]"
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {
+                  router.push('/demo')
+                }}
               >
-                Watch demo
+                Try demo
               </Button>
             </div>
           </div>
@@ -162,8 +166,8 @@ channels like web-chat, SMS, Email or even social. It’s part tech, part magic.
                   <h2 className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight  `}>
                     {content.title}
                   </h2>
-                    <content.logo className={`text-primary w-12 h-12 ${index === 0 && '!text-white'}`} />
-                  <p className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight`}>
+                    <Image alt="content.title" width={50} height={50} src={content.logo} className={`text-primary w-20 h-20 ${index === 0 && 'invert'}`} />
+                  <p className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight ${index === 2 && '!text-primary'}`}>
                     {content.description}
                   </p>
                    

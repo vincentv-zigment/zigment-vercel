@@ -17,10 +17,13 @@ import SeoData from "@/components/tools/seo-data";
 import Newsletter3 from "@/components/common/newsletter";
 import Brand from "@/components/sections/landing-page/brand";
 import Integration2 from "@/components/sections/landing-page/integration2";
+import ChatBotV2 from "@/components/common/chatbot-v2";
  
 
 export default function Home() {
   return (
+    <>
+   
     <main>
       <ZigmentHero/>
       <Brand />
@@ -39,5 +42,6 @@ export default function Home() {
       <FAQ/>
       <Newsletter3 />
     </main>
+    </>
   );
 }

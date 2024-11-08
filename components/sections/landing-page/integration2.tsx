@@ -65,12 +65,12 @@ const Integration2 = ( ) => {
 
           <TitleSection2
             title={`Zigment fits right into your stack`}
-            details={`Ability to understand and generate content in different to expand their reach and appeal to a wider audience.`}
+            details={` Zigment is built with ecosystem integration in mind. Our platform is integrated with all the major software and platforms.`}
             titleClassName="max-w-3xl"
           />
 
           {items && items.length && (
-            <div className="mt-[33px] xl:mt-[43px] 2xl:mt-[65px] mx-auto max-w-[1140px] flex flex-wrap justify-center gap-5 has_fade_anim">
+            <div className="mt-[33px] xl:mt-[43px] 2xl:mt-[65px] mx-auto max-w-4xl flex flex-wrap justify-center gap-5 has_fade_anim">
               {items.map((item, i) => (
                 <div
                   key={`integration_item-${i}`}
@@ -94,7 +94,7 @@ const Integration2 = ( ) => {
                   buttonVariants({ variant: "primary",   })
                 )}
               >
-                <span >Explore Integration</span>
+                <span >Explore Integrations</span>
               </Link>
             </div>
         </div>

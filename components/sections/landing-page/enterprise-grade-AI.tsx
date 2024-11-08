@@ -17,6 +17,7 @@ import {
 import { FaHandshake, FaMagnifyingGlass } from "react-icons/fa6";
 import { MdOutlineSecurity } from "react-icons/md";
 import Title1 from "@/components/common/title/title1";
+import Image from "next/image";
  
 
 const items = [
@@ -24,22 +25,28 @@ const items = [
     image:'',
     title:'Secure',
     description:`Ensuring that your proprietary data isn’t shared on public domains. And only the permitted data is shared with the users and nothing more. `,
-    logo:MdOutlineSecurity 
+    logo:'/assets/imgs/enterprise-grade-ai/secure.svg' 
   },
   {
     image:'',
     title:'Compliant',
-    description:`External guardrails to ensure that the AI output is not only free of hallucinations but also compliant with your enterprise policies and benchmarks.`,
-    logo:FaHandshake 
+    description:`External guardrails to ensure that the AI output is free of hallucinations and also compliant with your enterprise policies and benchmarks.`,
+    logo:'/assets/imgs/enterprise-grade-ai/compliant.svg' 
 
   }
   ,
   {
     image:'',
     title:'Transparent',
-    description:`Gain visibility into the underlying costs and ensure service reliability with a complete traceability of data flowing within the system with real-time monitoring.`,
-    logo:FaMagnifyingGlass 
+    description:`Gain visibility into the underlying costs and ensure service reliability with a full traceability of data flowing within the system in real-time.`,
+    logo:'/assets/imgs/enterprise-grade-ai/transparent.svg' 
   }
+]
+
+const certifiaction_logos = [
+  '/assets/imgs/enterprise-grade-ai/isooo.png',
+  '/assets/imgs/enterprise-grade-ai/socc.png',
+  '/assets/imgs/enterprise-grade-ai/hippa-logo.png'
 ]
 
 const EnterpriseGradeAI = ( ) => {
@@ -60,8 +67,13 @@ const EnterpriseGradeAI = ( ) => {
           text={`Enterprise grade AI`}
           className="w-full mx-auto text-center has_fade_anim"
         />
-           <div className="max-w-[520px] mx-auto text-center py-8">
-              <p className="has_fade_anim">{`Zigment is ISO 27001, SOC2 and HIPPA compliant`}</p></div>
+              <div className="flex items-center gap-24 mx-auto justify-center mt-10 has_fade_anim">
+                {certifiaction_logos.map((logo, i) => {
+                  return (
+                    <Image alt={logo} width={100} height={100} src={logo} key={i} className="h-32 w-32 inline-block" />
+                  )
+                })}
+              </div>
         <Carousel
           dir="ltr"
           opts={{
@@ -78,13 +90,9 @@ const EnterpriseGradeAI = ( ) => {
                   <div className="p-[25px] lg:p-[45px] bg-white border border-border rounded-theme h-full">
                     <div className="flex flex-col justify-center items-center  gap-[20px]">
                       <div className="w-[84px] h-[84px] inline-flex items-center rounded-full justify-center bg-gray-100">
-                        <item.logo className="text-primary w-10 h-10 object-fit" />
+                        <Image alt={item.title} width={100} height={100} src={item.logo} className="text-primary w-16 h-16 object-fit"/>
                       </div>
-                      {/* <Avatar className="w-[63px] h-[63px]">
-
-                        <AvatarImage src={item.image} alt="Avatar" />
-                        <AvatarFallback>AV</AvatarFallback>
-                      </Avatar> */}
+                     
                       <div>
                         <h2 className="text-[22px] leading-none">
                           {item.title}

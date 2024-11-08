@@ -5,6 +5,8 @@ import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 're
 import { v4 as uuidv4 } from 'uuid'
 import { useRouter } from 'next/router';
 import { CompanyDataI, WebChatSessionData } from './ChatRightAway';
+import { useChatBotTrigger } from '../chatbot-v2/ChatBotTriggerContext';
+import { set } from 'zod';
 
 type Props = {
     widget_id: string,
@@ -44,6 +46,21 @@ const ChatBottomBar = ({
     const [textareaRows, setTextareaRows] = useState(1); // Initialize with 1 row
     const [userMessage, setuserMessage] = useState("");
     const [messageSending, setMessageSending] = useState(false);
+    const { triggerMessage, setTriggerMessage } = useChatBotTrigger();
+
+    useEffect(() => {
+        if (triggerMessage && triggerMessage.open) {
+            setuserMessage(triggerMessage.message);
+          // setMessages((prevMessages) => [
+          //   ...prevMessages,
+          //   {
+          //     _id: prevMessages.length + 1,
+          //     role: "user",
+          //     content: triggerMessage.message,
+          //   },
+          // ]);
+        }
+      }, [triggerMessage]);
 
     const [testCaseCalled, setTestCaseCalled] = useState(false);
     const textAreaRef = useRef<HTMLTextAreaElement>(null);

@@ -46,21 +46,39 @@ const Newsletter3 = (props: Props) => {
     { scope: containerRef }
   );
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+ 
+
+  
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values, 'values');
+
+    try {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/cms/new-lead`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: values.email,
+          is_email_subscription: true,
+        }),
+      });
+      // Handle response here
+    } catch (error) {
+      console.log(error, "error");
+    }
   }
   return (
     <section className="bg-theme bg-[url(/assets/imgs/shape/shape-r-5.png)] bg-no-repeat bg-cover sec_space1">
       <div className="container" ref={containerRef}>
         <div className="max-w-[618px] mx-auto text-center mb-[55px]">
           <Title1
-            text="Let’s kick-start your collaboration to customers"
+            text="It’s time for a shapeshifting sales approach."
             className="pb-[15px] md:pb-[24px] has_fade_anim"
           />
           <p className="text-primary has_fade_anim">
-            Optimize your impact this holiday season with an AI-driven,
-            multichannel marketing strategy. Get all the tips and tricks in our
-            free ebook.
+          Join our mailing list to receive some occasional updates, hacks, advice
+          and generally useful stuff from us.
           </p>
         </div>
         <div className="max-w-[910px] mx-auto has_fade_anim">

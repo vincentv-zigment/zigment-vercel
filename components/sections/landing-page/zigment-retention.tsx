@@ -11,14 +11,15 @@ import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import Title1 from "@/components/common/title/title1";
 import { MdSupportAgent } from "react-icons/md";
 import { LuConciergeBell } from "react-icons/lu";
-import { FaRegUserCircle } from "react-icons/fa";
+import { FaHandHolding, FaHandHoldingMedical, FaRegUserCircle } from "react-icons/fa";
+import { FaHandHoldingHeart } from "react-icons/fa6";
  
 
 const contentArray = [
     {
       title: 'Customer Onboarding',
       description: `Use Zigment’s AI agents to handhold your customers while they learn about your platform and to ensure the best possible onboarding for them.`,
-      icon: FaRegUserCircle 
+      icon: FaHandHoldingMedical    
     },
     {
       title: 'Personal Concierge',
@@ -69,7 +70,7 @@ const ZigmentRetention = ( ) => {
                         w-16 h-16 flex items-center justify-center rounded-full 
                       `}>
 
-                      {item.icon && <item.icon className="text-primary w-7 h-7" />}
+                      {item.icon && <item.icon className="text-primary w-9 h-9" />}
                     </div>
                     <div>
                       <h2 className="text-[18px] md:text-[24px] pb-0 md:pb-[13px]">

@@ -88,7 +88,7 @@ const FAQ = () => {
   return (
     <section className="sec_space1">
       <div className="container" ref={containerRef}>
-        <div className="relative grid grid-cols-1 xl:grid-cols-[1fr_600px] 2xl:grid-cols-[1fr_740px] gap-10 xl:gap-5">
+        <div className="relative flex gap-10 xl:gap-24">
           <div className="max-w-full md:max-w-[80%] xl:max-w-[350px] mx-auto xl:mx-0">
             <TitleSection2
               title={`Frequently Asked Questions`}
@@ -96,7 +96,7 @@ const FAQ = () => {
               className="text-center xl:text-start"
             />
           </div>
-          <div>
+          <div className="w-full">
               <Accordion
                 type="single"
                 collapsible

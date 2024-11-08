@@ -18,9 +18,7 @@ const ServiceCard6 = ({ service }: Props) => {
   return (
     <div className="px-[50px]">
       {image && (
-        <div>
-          <Image width={85} height={86} src={image} alt="feature icon" />
-        </div>
+          <Image width={85} height={86} className="w-24 h-24" src={image} alt="feature icon" />
       )}
       <div className="mt-[38px]">
         <h3

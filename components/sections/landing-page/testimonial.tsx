@@ -12,11 +12,17 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card"
 
 // components
 import Title1 from "@/components/common/title/title1";
 import RattingStar2 from "@/components/blocks/landing-page/ratting-stars";
+import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 type Props = {
   testimonial: {
@@ -33,40 +39,33 @@ type Props = {
   };
 };
 
-const items:{
-  name: string;
-  occupation: string;
-  image: string;
-  text: string;
-  rating: number;
-}[] = [
+const items  = [
+   
   {
-    name:'Naveen P',
-    occupation:'COO, CureJoy',
-    image:'https://cdn.zigment.ai/assets/curejoy_logo.jpeg',
-    text:'We are seeing that our conversion rates of candidate response and also confirmed interviews improve significantly with ZigHR.',
-    rating:5
+    company:'Trinkerr',
+    image:'https://cdn.zigment.ai/assets/1710832034-trinkerr.png',
+    text:'“We are seeing almost 40% uplift in our onboarding conversions. And this is happening with almost 70% lesser human effort” - Srini',
   },
   {
-    name:'Srini',
-    occupation:'CMO, 1Balance',
-    image:'https://cdn.zigment.ai/assets/1balance.svg',
-    text:'We have practically eliminated the role involved in co-ordinating with the candidates. Saving a lot of man-hours!',
-    rating:5
+    company:'Nova IVF',
+    image:'https://cdn.zigment.ai/assets/1711534703-nova-ivf.jpg',
+    text:`With engagement across 10+ languages, Zigment improved the marketing conversion by 38% and lead qualification by almost 90%. `,
   },
   {
-    name:'Caleb',
-    occupation:'CEO, UniGage',
-    image:'https://cdn.zigment.ai/assets/unigage_logo.jpeg',
-    text:'I am blown over by the human-like interactions that ZigHR’s AI is able to have with the potential candidates. This is the future.',
-    rating:5
+    company:'Godrej Properties',
+    image:'/assets/imgs/testimonial/godrej-properties-logo.png',
+    text:'Godrej Properties has deployed Zigment for its lead campaigns, outbound and print media. Zigment delivers a rich brand experience.',
   },
   {
-    name:'Charry Maron',
-    occupation:'Developer',
-    image:'/images/testimonial/1.jpg',
-    text:'Our unique and flexible pricing model is designed to allow any type of business to access high-end digital solutions, and to support them as they grow. Pay by usage, not by number of contacts.',
-    rating:5
+    company:'Give.org',
+    image:'/assets/imgs/testimonial/give-org.png',
+    text:'Zigment automates the volunteer engagement and donation process for Give.org. Zigment is deployed on SMS and social media.',
+  }
+  ,
+  {
+    company:'TIE',
+    image:'/assets/imgs/testimonial/tie-logo.png',
+    text:'Deployed as a ticketing agent and a full service concierge for the event attendees, Zigment has already provided an 8x ROI ',
   }
 ]
 
@@ -85,50 +84,50 @@ const Testimonial = ( ) => {
     <section className="sec_space1">
       <div className="container" ref={containerRef}>
         <Title1
-          text={`What our customers are saying`}
+          text={`Customer Success Stories`}
           className="w-full mx-auto text-center has_fade_anim"
         />
         <Carousel
-          dir="ltr"
-          opts={{
-            duration: 60,
-          }}
-          className="w-full mt-[51px] 2xl:mt-[61px] mx-auto has_fade_anim"
-        >
-          <CarouselContent className="gap-[14px]">
-            {items &&
-              items.length &&
-              items.map((item, i) => (
-                <CarouselItem
-                  key={`testimonial_item-${i}`}
-                  className="md:basis-1/2 lg:basis-1/3"
-                >
-                  <div className="p-[25px] lg:p-[45px] bg-white border border-border rounded-theme">
-                    <div className="flex items-center gap-[20px]">
-                      <Avatar className="w-[63px] h-[63px]">
-                        <AvatarImage src={item.image} alt="Avatar" />
-                        <AvatarFallback>AV</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <h2 className="text-[22px] leading-none">
-                          {item.name}
-                        </h2>
-                        <small className="text-[14px] mt-[9px] leading-none">
-                          {item.occupation}
-                        </small>
-                      </div>
-                    </div>
-                    <p className="text-[19px] 2xl:text-[22px] leading-[1.36] mt-[36px]">
+      opts={{
+        align: "start",
+        duration: 20,
+      }}
+      className="w-full max-w-6xl mt-20 mx-auto px-8"
+    >
+      <CarouselContent>
+        {items.map((item, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <div className="p-1">
+              <Card className="rounded-2xl h-[400px]">
+                <CardContent className="  p-10">
+                  <div className="">
+                    <Image 
+                      width={200}
+                      height={200}
+                      alt={item.text} 
+                      src={item.image} 
+                      className="w-auto h-8 object-contain"
+                    />
+                    <h3 className="text-[20px] font-normal leading-none mt-8" style={{fontFamily:'"Instrument Sans", "sans-serif"'}}>
+                      {item.company}
+                    </h3>
+                    <p className="text-[19px] 2xl:text-[22px] leading-[1.36] mt-[36px] ">
                       {item.text}
                     </p>
-                    <div className="mt-[23px] flex items-center gap-[4px]">
-                      <RattingStar2 number={item.rating} />
-                    </div>
                   </div>
-                </CarouselItem>
-              ))}
-          </CarouselContent>
-        </Carousel>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious variant={'outline'} className="w-16 h-16 border-none" >
+        <FaArrowLeft className="w-[60px] h-[60px]"/>  
+      </CarouselPrevious>
+      <CarouselNext variant={'outline'} className="w-16 h-16 border-none"  >
+        <FaArrowRight className="w-[60px] h-[60px]"/>  
+      </CarouselNext>
+    </Carousel>
       </div>
     </section>
   );
