@@ -170,7 +170,7 @@ const ChatBotRightAway = ({
       );
       if (response.status === 200) {
         // New messages received
-        const newMessages = response.data;
+        const newMessages = response.data as { _id: number | string; role: string; content: string; timestamp?: number }[];
         // Update your state with new messages
         setMessages((prevMessages) => {
           if (newMessages.length > prevMessages.length) {
@@ -211,7 +211,7 @@ const ChatBotRightAway = ({
         postData
       );
       if (response.status === 200) {
-        const newMessages = response.data;
+        const newMessages = response.data as { _id: number | string; role: string; content: string; timestamp?: number }[];
         // Use functional update to access the latest state
         setMessages((prevMessages) => {
           if (newMessages.length > prevMessages.length) {
@@ -238,10 +238,10 @@ const ChatBotRightAway = ({
 
       if (widget_id) {
         try {
-          const { data } = await axiosWithoutAuth.get(
+          const response = await axiosWithoutAuth.get(
             `/webchat/settings/${widget_id}`
           );
-          // return data.data
+          const data: CompanyDataI['data'] = (response.data as any).data;
           setCompanyData({ error: null, data, loading: false });
         } catch (error) {
           setCompanyData({

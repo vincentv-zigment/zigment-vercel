@@ -172,8 +172,8 @@ const ChatBotV2 = ({
         const newMessages = response.data;
         // Update your state with new messages
         setMessages((prevMessages) => {
-          if (newMessages.length > prevMessages.length) {
-            return [...newMessages];
+          if ((newMessages as typeof messages).length > prevMessages.length) {
+            return [...(newMessages as typeof messages)];
           }
           return prevMessages;
         });
@@ -212,8 +212,8 @@ const ChatBotV2 = ({
         const newMessages = response.data;
         // Use functional update to access the latest state
         setMessages((prevMessages) => {
-          if (newMessages.length > prevMessages.length) {
-            return [...newMessages];
+          if ((newMessages as typeof messages).length > prevMessages.length) {
+            return [...(newMessages as typeof messages)];
           }
           return prevMessages;
         });
@@ -239,7 +239,7 @@ const ChatBotV2 = ({
             `/webchat/settings/${widget_id}`
           );
           // return data.data
-          setCompanyData({ error: null, data, loading: false });
+          setCompanyData({ error: null, data: data as CompanyDataI['data'], loading: false });
         } catch (error) {
           setCompanyData({
             error: "Invalid Website",

@@ -13,9 +13,7 @@ import MarkdownToHTML3 from "@/components/common/markdown-to-html3";
 
 export async function getServerSideProps(context: any) {
   try {
-    const response = await axiosWithoutAuth(
-      `/cms/job-post/${context.params.slug}`
-    );
+    const response = await axiosWithoutAuth.get(`/cms/job-post/${context.params.slug}`);
 
     return {
       props: {

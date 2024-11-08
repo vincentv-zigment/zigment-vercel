@@ -22,10 +22,14 @@ const GetWidgetCode = ( ) => {
   const BASE_URL = 'https://fsfki8lqzd.execute-api.us-east-1.amazonaws.com/users';
   const CDN_URL = 'https://cdn.zigment.ai/whatsapp-custom-widget';
 
-  const fetchWidgetCode = async ({countryCode, ...rest}: WidgetDataI) => {
+  interface FetchWidgetCodeResponse {
+    userId: string;
+  }
+  
+  const fetchWidgetCode = async ({countryCode, ...rest}: WidgetDataI): Promise<FetchWidgetCodeResponse> => {
     const postData = {...rest, phoneNumber: countryCode + rest.phoneNumber, email};
     const response = await axios.post(BASE_URL, postData);
-    return response.data;
+    return response.data as FetchWidgetCodeResponse;
   };
 
   const mutation = useMutation(fetchWidgetCode, {

@@ -32,9 +32,9 @@ const Test = () => {
             }
           );
           const linkDetails: LinkDetails = {
-            longUrl: data.long_url,
-            totalClicks: data.total_clicks,
-            details: data.details,
+            longUrl: (data as any).long_url,
+            totalClicks: (data as any).total_clicks,
+            details: (data as any).details,
           };
 
           setLinkData({

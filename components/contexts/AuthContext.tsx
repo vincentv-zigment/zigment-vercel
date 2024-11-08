@@ -134,10 +134,9 @@ export const AuthProvider = ({ children }: any) => {
           },
         })
         .then((response) => {
-          const user: User = response.data.user;
-          const org_data: OrgLevelData[] = response.data.orgsAndRoles
-            ? response.data.orgsAndRoles
-            : [];
+          const data = response.data as { user: User; orgsAndRoles: OrgLevelData[] };
+          const user: User = data.user;
+          const org_data: OrgLevelData[] = data.orgsAndRoles ? data.orgsAndRoles : [];
           const getLatestOrgData = org_data.find(
             (org: OrgLevelData) => org.org_id === selectedOrg
           );
