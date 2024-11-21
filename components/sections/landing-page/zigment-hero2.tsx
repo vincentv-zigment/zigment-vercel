@@ -32,7 +32,7 @@ const contentArray = [
   },
 ];
 
-const ZigmentHero = () => {
+const ZigmentHero2 = () => {
   const containerRef = useRef<HTMLDivElement>(null!);
 
   useGSAP(
@@ -45,7 +45,7 @@ const ZigmentHero = () => {
   return (
     <>
       <section className="pt-[150px] lg:pt-[155px] xl:pt-[240px] pb-[50px] xl:pb-[100px] text-center 
-      bg-[url('/hero-4.png')] bg-no-repeat bg-[#F9F6ED]
+      bg-[url('/hero-3.png')] bg-no-repeat bg-[#F9F6ED]
        bg-cover relative	">
       {/* <Image width={1000} height={1000} src={`/hero-2.png`} alt="hero-image" className="w-full h-full object-cover blur-sm	 absolute top-0" /> */}
         <div className="container" ref={containerRef}>
@@ -153,4 +153,4 @@ channels like web-chat, SMS, Email or even social. It’s part tech, part magic.
   );
 };
 
-export default ZigmentHero;
+export default ZigmentHero2;
