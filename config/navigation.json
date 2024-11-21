@@ -1,0 +1,106 @@
+{
+  "header": [
+    {
+      "name": "Workflows of the future",
+      "path": "/workflows-of-the-future"
+    },
+    {
+      "name": "Resources",
+      "path": "#",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Blog and Ebooks",
+          "path": "/blog"
+        },
+        {
+          "name": "Integrations",
+          "path": "/integrations"
+        },
+        {
+          "name": "Tools",
+          "path": "/tools"
+        },
+        {
+          "name": "Demos",
+          "path": "/demo"
+        }
+      ]
+    },
+    {
+      "name": "About",
+      "path": "#",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "About Us",
+          "path": "/about-us"
+        },
+        {
+          "name": "Contact",
+          "path": "/contact-us"
+        },
+        {
+          "name": "Careers",
+          "path": "/careers"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "title": "Resources",
+      "children": [
+        {
+          "name": "Blogs & Ebooks",
+          "path": "/blog"
+        },
+        {
+          "name": "Integrations",
+          "path": "/integrations"
+        },
+        {
+          "name": "Tools",
+          "path": "/tools"
+        },
+        {
+          "name": "Demos",
+          "path": "/demo"
+        },
+        {
+          "name": "Login",
+          "path": "https://app.zigment.ai/signin"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "children": [
+        {
+          "name": "About Us",
+          "path": "/about-us"
+        },
+        {
+          "name": "Careers",
+          "path": "/careers"
+        },
+        {
+          "name": "Terms of Service",
+          "path": "/terms-of-service"
+        },
+        {
+          "name": "Privacy Policy",
+          "path": "/privacy-policy"
+        },
+        {
+          "name": "Refund And Policy",
+          "path": "/refund-policy"
+        },
+        {
+          "name": "Contact Us",
+          "path": "/contact-us"
+        }
+      ]
+    }
+  ]
+}

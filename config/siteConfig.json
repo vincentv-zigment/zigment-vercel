@@ -1,0 +1,29 @@
+{
+  "social": [
+    {
+      "name": "Fb",
+      "link": "https://www.facebook.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Tw",
+      "link": "https://twitter.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "In",
+      "link": "https://www.instagram.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Db",
+      "link": "https://dribbble.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Li",
+      "link": "https://www.behance.net/",
+      "value": "750,000"
+    }
+  ]
+}

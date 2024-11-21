@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "types": ["jest", "@testing-library/jest-dom"]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/common/marketing/landing-page/components/Navbar/TailwindNav.jsx",
+    "components/sections/marketing/solutions/ModalVideo.jsx",
+    "components/blocks/flow-editor-old/old/messages/Toogle.jsx",
+    "components/SelectCountry.jsx",
+    "components/ModalVideo1.jsx"
+, "pages/tools/qr-code-generator"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
