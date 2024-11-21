@@ -41,7 +41,7 @@ const Footer = () => {
     return null;
   }
   return (
-    <footer className="bg-primary">
+    <footer className="  bg-[url('/footer-bg.png')] bg-no-repeat   bg-cover">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-[50px] gap-x-[60px] justify-between pt-[58px] pb-[51px] lg:pt-[78px] lg:pb-[71px] 2xl:pt-[128px] 2xl:pb-[121px]">
           <div className="col-span-1 lg:col-span-2">
