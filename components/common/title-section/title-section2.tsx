@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 // lib
 import { cn } from "@/lib/utils";
@@ -9,7 +9,7 @@ import Title1 from "../title/title1";
 type Props = {
   title: string;
   sub_title?: string;
-  details: string;
+  details: ReactNode;
   heading?: boolean;
   html?: boolean;
   className?: string;
