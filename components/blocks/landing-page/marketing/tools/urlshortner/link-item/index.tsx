@@ -1,4 +1,5 @@
 import Spinner from "@/components/common/loaders/spinner";
+import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/useToast";
 import axiosWithoutAuth from "@/lib/axiosAPIwithoutAuth";
 import { Marketing_Lead_Source } from "@/lib/types/ui";
@@ -116,7 +117,7 @@ const LinkItem: React.FC<LinkItemProps> = ({ link, onRemove }) => {
         </div>
         {showModal && (
           <>
-            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center" onClick={() => setShowModal(false)}>
+            <div className="fixed top-0 left-0 w-full h-full bg-black-2 opacity-50   flex justify-center items-center" onClick={() => setShowModal(false)}>
             </div>
             <div className="bg-white p-5 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg flex flex-col items-center justify-center w-full max-w-xl h-72">
               <div className="w-fit h-fit bg-white   flex items-center justify-center overflow-hidden">
@@ -134,20 +135,22 @@ const LinkItem: React.FC<LinkItemProps> = ({ link, onRemove }) => {
                   </button>
                 ))}
               </div>
-              <div className="flex flex-center gap-2 ">
-                <button
+              <div className="flex flex-center gap-4 mt-4  ">
+                <Button
                   onClick={downloadQRCode}
-                  className="  py-3 px-6 bg-brand-orange-main/80 hover:bg-brand-orange-main/90 active:bg-brand-orange-main font-medium text-white rounded flex items-center gap-4 "
+                  variant={'primary'} 
+                  size={'sm'}
                 >
                   <FiDownload className="w-5 h-5 	" />
                   <span> Download</span>
-                </button>
-                <button
+                </Button>
+                <Button
                   onClick={() => setShowModal(false)}
-                  className="py-3 px-6 bg-white hover:bg-brand-orange- font-medium text-brand-orange-main   rounded flex items-center gap-4"
+                  variant={'outline'}
+                  size={'sm'}
                 >
                   Close
-                </button>
+                </Button>
               </div>
             </div>
           </>
@@ -277,9 +280,11 @@ const ContactModal = ({ href }: { href: string }) => {
                 </div>
               </div>
               <div className="mt-4   w-full">
-                <button
+                <Button
+                  variant={'primary'}
                   type="button"
-                  className="inline-flex w-full justify-center rounded-lg border border-transparent bg-brand-orange-main px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2    sm:text-sm"
+                  size={'full'}
+                        
                   onClick={(e) => { handleSubmit(e) }}
 
                 >
@@ -287,7 +292,7 @@ const ContactModal = ({ href }: { href: string }) => {
                     <Spinner color="" />
                     : 'Continue'}
 
-                </button>
+                </Button>
                 <div className="text-center text-xs mt-2 ">We respect your privacy & information</div>
 
               </div>

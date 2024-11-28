@@ -78,7 +78,15 @@ const Newsletter3 = () => {
     }
   }
   return (
-    <section className="bg-theme bg-[url(/assets/imgs/shape/shape-r-5.png)] bg-no-repeat bg-cover sec_space1">
+    <section className="bg-theme  sec_space1 relative">
+      <Image
+        src={`/assets/imgs/shape/shape-r-5.png`}
+        className="absolute top-0 right-0 w-full h-full object-cover"
+        alt="shape"
+        width={1920}
+        height={1080}
+        loading="lazy"
+      />
       <div className="container" ref={containerRef}>
         <div className="max-w-[618px] mx-auto text-center mb-[55px]">
           <Title1
@@ -101,6 +109,7 @@ const Newsletter3 = () => {
                 height={13}
                 src="/assets/imgs/icon/email.png"
                 alt="icon"
+                loading="lazy"
               />
               <div className="grow">
                 <FormField
@@ -131,3 +140,5 @@ const Newsletter3 = () => {
 };
 
 export default Newsletter3;
+
+//# sourceMappingURL=index.js.map

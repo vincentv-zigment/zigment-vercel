@@ -33,13 +33,16 @@ const Offcanvas = ({ headerNav, actionBtnClassName }: Props) => {
   return (
     <Drawer direction="left">
       <DrawerTrigger asChild>
-        <button>
+        <button aria-label="Open menu">
           <FaBars className={cn("w-6 h-6", actionBtnClassName)} />
         </button>
       </DrawerTrigger>
       <DrawerContent className="bg-primary rounded-none p-[30px] overflow-hidden top-0 mt-0 w-full md:w-1/2 z-[999]">
         <DrawerClose asChild>
-          <button className="relative w-[30px] md:w-[50px] h-[30px] min-h-[30px] md:h-[50px] md:min-h-[50px] rounded-full bg-primary border border-[#333337]">
+          <button
+            aria-label="Close menu"
+            className="relative w-[30px] md:w-[50px] h-[30px] min-h-[30px] md:h-[50px] md:min-h-[50px] rounded-full bg-primary border border-[#333337]"
+          >
             <span className="w-3 md:w-[22px] h-[1px] inline-block bg-white absolute left-[50%] top-[50%] -translate-x-[50%] rotate-45"></span>
             <span className="w-3 md:w-[22px] h-[1px] inline-block bg-white absolute left-[50%] top-[50%] -translate-x-[50%] -rotate-45"></span>
           </button>

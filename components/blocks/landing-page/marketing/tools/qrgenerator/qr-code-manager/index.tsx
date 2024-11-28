@@ -303,7 +303,10 @@ const QRCodeManager: React.FC<QRCodeManagerProps> = ({
                 "Loading"
               ) : (
                 <>
-                  Download QR <FiDownload className="font-bold stroke-2	" />
+                <span className="shrink-0">
+                  Download QR 
+                </span>
+                  <FiDownload className="font-bold stroke-2	" />
                 </>
               )}
             </button>

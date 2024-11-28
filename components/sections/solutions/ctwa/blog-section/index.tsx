@@ -11,39 +11,24 @@ import { useGSAP } from "@gsap/react";
 import { cn } from "@/lib/utils";
 
 // types
-import { SingleBlogType } from "@/types";
 
 // shadcn components
 import BlogItems from "@/components/common/blog-items";
 import Title1 from "@/components/common/title/title1";
 import { buttonVariants } from "@/components/ui/button";
+import { BlogI } from "@/lib/types/blog";
 
- 
 
-const blogs:SingleBlogType[] = [
-    {
-        content:'Easy hacks which you can implement today with little or no investment',
-        data:{
-            title:'How you can automate your hiring process with AI',
-            date:'June 7, 2023',
-            image:'/assets/imgs/blog-section/blog_1_image.webp'
-        },
-        slug:'how-you-can-automate-your-hiring-process-with-ai'
-    },
-    {
-        content:'Are you a Health / wellness coach, Business coach, Influencer,',
-        data:{
-            title:'Lead Nurturing with Conversational AI: A New Paradigm',
-            date:'June 7, 2023',
-            image:'/assets/imgs/blog-section/blog_2_image.webp'
-        },
-        slug:'lead-nurturing-with-conversational-AI'
-    }
-]
+ type Props = {
+    data:BlogI[]
+ }
 
-const BlogSection = () => {
+
+
+const BlogSection = ({data}:Props) => {
 
   const containerRef = useRef<HTMLDivElement>(null!);
+//   const getBlogData = await blogData();
 
   useGSAP(
     () => {
@@ -76,7 +61,7 @@ const BlogSection = () => {
             </div>
         </div>
         <div className="mt-[28px] xl:mt-[38px] 2xl:mt-[58px]">
-          <BlogItems blogs={blogs} />
+          <BlogItems blogs={data} />
         </div>
       </div>
     </section>

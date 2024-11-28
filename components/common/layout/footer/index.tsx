@@ -8,31 +8,31 @@ import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 
 const socials = [
   {
-    id:'linkedin',
-    link:'https://www.linkedin.com/company/zigment',
-    icon: FaLinkedin
+    id: "linkedin",
+    link: "https://www.linkedin.com/company/zigment",
+    icon: FaLinkedin,
   },
   {
-    id:'facebook',
-    link:'https://www.facebook.com/zigment',
-    icon: FaFacebook
+    id: "facebook",
+    link: "https://www.facebook.com/zigment",
+    icon: FaFacebook,
   },
   {
-    id:'instagram',
-    link:'https://www.instagram.com/zigment.ai',
-    icon: FaInstagram
+    id: "instagram",
+    link: "https://www.instagram.com/zigment.ai",
+    icon: FaInstagram,
   },
   {
-    id:'twitter',
-    link:'https://x.com/zigment_ai',
-    icon: FaXTwitter
+    id: "twitter",
+    link: "https://x.com/zigment_ai",
+    icon: FaXTwitter,
   },
   {
-    id:'youtube',
-    link:'https://www.youtube.com/@zigment01',
-    icon: FaYoutube 
+    id: "youtube",
+    link: "https://www.youtube.com/@zigment01",
+    icon: FaYoutube,
   },
-]
+];
 
 const Footer = () => {
   const router = useRouter(); // Initialize useRouter
@@ -41,22 +41,21 @@ const Footer = () => {
     return null;
   }
   return (
-    <footer className="  bg-[url('/footer-bg.png')] bg-no-repeat   bg-cover">
+    <footer className="bg-primary">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-[50px] gap-x-[60px] justify-between pt-[58px] pb-[51px] lg:pt-[78px] lg:pb-[71px] 2xl:pt-[128px] 2xl:pb-[121px]">
           <div className="col-span-1 lg:col-span-2">
-          <Image
+            <Image
               width={500}
               height={500}
-              src={'/Zigment_logo-white.svg'}
+              src={"/Zigment_logo-white.svg"}
               alt={`zigment`}
-              priority
               className="w-auto h-12 object-contain"
+              loading="lazy" // Add this line to lazy-load the image
             />
             <div className="mt-[21px] lg:mt-[31px] xl:mt-[31px] 2xl:mt-[41px]">
               <p className="max-w-[400px] lg:max-w-[300px] text-white-2">
                 The AI-Native Sales Engagement Platform
-                
               </p>
             </div>
           </div>
@@ -98,15 +97,15 @@ const Footer = () => {
                     className="text-white-2"
                     aria-label={item.id}
                   >
-                    <item.icon className="w-5 h-5"/>
+                    <item.icon className="w-5 h-5" />
                   </Link>
                 </li>
               ))}
             </ul>
           )}
-            <p className="text-[16px] font-bold text-white-2">
-              © Copyright 2024, All Rights Reserved | Zigment.ai
-            </p>
+          <p className="text-[16px] font-bold text-white-2">
+            © Copyright 2024, All Rights Reserved | Zigment.ai
+          </p>
         </div>
       </div>
     </footer>

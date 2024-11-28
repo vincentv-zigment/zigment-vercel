@@ -132,7 +132,7 @@ export default function CustomSelect4({
                                         {list && list.map((x) => (
                                             <Listbox.Option
                                                 key={`${x.id}-${x.value}-${x.label}-customselect-key`}
-                                                className={`relative text-base  select-none py-2 pl-3 pr-9 cursor-pointer hover:bg-brand-orange-main hover:text-white rounded-md flex items-center gap-2 ${selectedVal?.value === x.value ? 'bg-brand-orange-mainbg' : ''}`}
+                                                className={`relative text-base  select-none py-2 pl-3 pr-9 cursor-pointer hover:bg-primary hover:text-white rounded-md flex items-center gap-2 ${selectedVal?.value === x.value ? 'bg-border' : ''}`}
                                                 value={x}
                                             >
                                                 <>
@@ -147,7 +147,7 @@ export default function CustomSelect4({
                                         ))}
                                         {showButton && (
                                             <button
-                                                className={`w-full select-none py-2 pl-3 pr-9 cursor-pointer hover:bg-brand-orange-mainbg border-2 bottom-0 border-brand-orange-main text-brand-orange-main font-medium rounded-md`}
+                                                className={`w-full select-none py-2 pl-3 pr-9 cursor-pointer hover:bg-border border-2 bottom-0 border-brand-orange-main text-brand-orange-main font-medium rounded-md`}
                                                 onClick={buttonAction}
                                             >
                                                 {buttonLabel}

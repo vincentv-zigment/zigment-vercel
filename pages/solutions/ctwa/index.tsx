@@ -13,9 +13,32 @@ import ChatbotFeature from "@/components/sections/solutions/ctwa/chatbot-feature
 import CTWAHero from '@/components/sections/solutions/ctwa/hero';
 import LeverageSection from "@/components/sections/solutions/ctwa/leverage-section";
 import WhatsappAIAgent from "@/components/sections/solutions/ctwa/whatsapp-ai-agent";
+import { blogData } from "@/lib/blog/blog-data";
+import { BlogI } from "@/lib/types/blog";
 
+type Props = {
+  data: {
+    blogs: BlogI[];
+  };
+};
 
-export default function Home() {
+export async function getServerSideProps() {
+  try {
+    const getBlogData = await blogData();
+    return {
+      props: {
+        data: {
+          blogs: getBlogData,
+        },
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return { props: { data: null } };
+  }
+}
+
+export default function Home({data}:Props) {
   return (
     <>
       <main>
@@ -38,7 +61,7 @@ export default function Home() {
         <BuiltCampaign/>
         <Integration2/>
         <GoLive/>
-        <BlogSection/>
+        <BlogSection data={data.blogs} />
       </main>
     </>
   );

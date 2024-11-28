@@ -16,7 +16,7 @@ type Props = {
 const ServiceCard6 = ({ service }: Props) => {
   const { title, short_description, image } = service.data;
   return (
-    <div className="px-[50px]">
+    <div className="px-[50px] flex flex-col items-center lg:items-start text-center lg:text-left">
       {image && (
           <Image width={85} height={86} className="w-24 h-24" src={image} alt="feature icon" />
       )}

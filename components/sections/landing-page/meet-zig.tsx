@@ -36,7 +36,7 @@ const MeetZig = () => {
       
         <div className="container" ref={containerRef}>
           <div className="grid grid-cols-1 lg:grid-cols-[6fr_5fr] gap-6 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 hidden md:block">
               <Image
                 width={630}
                 height={700}
@@ -58,8 +58,21 @@ const MeetZig = () => {
                   <p className="has_fade_anim">{`Zig is knowledgeable, attentive, honest, empathetic. Offering real-time, personalized, one-on-one interactions that are meaningful, contextually relevant and focused.`}</p>
               </div>
 
+              <div className=" my-6 block md:hidden">
+              <Image
+                width={630}
+                height={700}
+                src={
+                  "/assets/imgs/meet-zig/z_web_IG-07.png"
+                }
+                className="rounded-[40px]"
+                alt="community-thumb"
+                data-speed="1.2"
+              />
+            </div>
+
               
-              <div className="py-[25px] lg:py-[45px] has_fade_anim">
+              <div className="py-[25px] lg:py-[45px] has_fade_anim text-center md:text-left">
                 <Button
                 variant={'primary2'}
                 onClick={()=>{

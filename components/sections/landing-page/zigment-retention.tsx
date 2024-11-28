@@ -8,10 +8,11 @@ import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import { useGSAP } from "@gsap/react";
 
 // components
-import Title1 from "@/components/common/title/title1";
 import { FaHandHoldingMedical } from "react-icons/fa";
 import { LuConciergeBell } from "react-icons/lu";
 import { MdSupportAgent } from "react-icons/md";
+import dynamic from "next/dynamic";
+const Title1 = dynamic(() => import("@/components/common/title/title1"));
  
 
 const contentArray = [
@@ -56,6 +57,23 @@ const ZigmentRetention = ( ) => {
             <div className="max-w-[520px]">
               <p className="has_fade_anim">{`Deploy Zigment as a 24/7 concierge for your customers and make them feel valued much more. Increase your customer retention by over 45%.`}</p>
             </div>
+            <div className="relative max-w-full lg:max-w-[630px] h-auto lg:h-[75%] rounded-[40px] mx-auto bg-[#FAFAFA] my-10 md:mt-0 p-0 lg:p-10 block md:hidden">
+              <Image
+                width={492}
+                height={542}
+                src={`/assets/imgs/zigment-retention/bg-retention.png`}
+                alt="community-thumb"
+                className="h-full bg-white w-auto object-contain"
+              /> 
+              <Image
+                width={500}
+                height={500}
+                data-speed="0.9"
+                src={`/assets/imgs/zigment-retention/zigment-retention3.png`}
+                alt="community-thumb"
+                className="w-full md:w-[80%] h-auto top-1/2 -translate-y-1/2 absolute   object-contain"
+              /> 
+          </div>
               <div className="mt-[30px] md:mt-[45px] has_fade_anim">
                 {contentArray.map((item, i) => (
                   <div
@@ -83,7 +101,7 @@ const ZigmentRetention = ( ) => {
                 ))}
               </div>
           </div>
-          <div className="relative max-w-full lg:max-w-[630px] h-auto lg:h-[75%] rounded-[40px] mx-auto bg-[#FAFAFA] mt-[50px] md:mt-0 p-0 lg:p-10">
+          <div className="relative max-w-full lg:max-w-[630px] h-auto lg:h-[75%] rounded-[40px] mx-auto bg-[#FAFAFA] mt-[50px] md:mt-0 p-0 lg:p-10 hidden md:block">
               <Image
                 width={492}
                 height={542}

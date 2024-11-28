@@ -108,24 +108,26 @@ drive your whatsapp campaigns on Meta, massively profitable.
                 <Image
                   width={310}
                   height={505}
-                  src={`/assets/imgs/ctwa/img-r-90.webp`}
+                  src={`/assets/imgs/ctwa/hero-image1.png`}
                   data-speed="0.8"
                   alt="robot image"
                 />
               <div className="flex flex-col gap-[10px] lg:gap-[20px] pt-[50px]">
                   <Image
-                    width={300}
-                    height={230}
-                    src={`/assets/imgs/ctwa/img-r-89.webp`}
-                    className="rounded-theme"
+                    width={600}
+                    height={500}
+                    src={`/assets/imgs/ctwa/10.png`}
+                    className="rounded-theme   object-contain"
+                    style={{width:'500px'}}
                     alt="robot image"
                     data-speed="1.1"
                   />
                   <Image
-                    width={300}
-                    height={309}
-                    src={`/assets/imgs/ctwa/img-r-88.webp`}
+                    width={1000}
+                    height={1000}
+                    src={`/assets/imgs/ctwa/11.png`}
                     className="rounded-theme"
+                    style={{width:'500px', height:'auto', objectFit:'contain'}}
                     alt="robot image"
                     data-speed="1.1"
                   />

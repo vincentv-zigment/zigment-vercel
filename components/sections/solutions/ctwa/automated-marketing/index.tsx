@@ -41,19 +41,19 @@ const tab_content = [
     key: 'tab1',
     title: 'Realtime performance updates of your campaigns',
     content: 'Get a macro view of your Meta-linked campaigns and a micro view of all the user engagement at all times. Track progress and download reports any time.',
-    image: '/assets/imgs/ctwa/dashboard.png',
+    image: '/assets/imgs/ctwa/automatic-marketing/dashboard1.png',
   },
   {
     key: 'tab2',
     title: 'Lead funnel status for each & every click',
     content: 'Watch each lead pass though your sales funnel and progress in real time. Each conversation gets automatically tagged with the correct status update and raise alerts if required.',
-    image: '/assets/imgs/ctwa/contact-page.png',
+    image: '/assets/imgs/ctwa/automatic-marketing/contact-page.png',
   },
   {
     key: 'tab3',
     title: 'Conversation summary & lead engagement advice',
     content: 'Get a complete summary of every conversation added to your CRM or contact center software. Also get the relevant closure advice for your calling executives to build context and close better.',
-    image: '/assets/imgs/ctwa/chat-summary.png',
+    image: '/assets/imgs/ctwa/automatic-marketing/chat-summary.png',
   },
 ]
 
@@ -133,7 +133,7 @@ const AutomatedMarketing = () => {
                       width={500}
                       height={500}
                       src={tab.image}
-                      className={`h-auto w-full object-contain rounded overflow-hidden bg-white ${i!==2 && 'p-1 rounded-lg'}`}
+                      className={`h-auto w-full object-contain rounded overflow-hidden   ${i!==2 && 'rounded-lg'}`}
                       alt="gallery image"
                     />
                   </div>

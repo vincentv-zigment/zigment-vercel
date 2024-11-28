@@ -106,7 +106,7 @@ to social media to messenger apps. And your Google / Meta Ads too`}
               {contentArray.map((service) => (
                 <div
                   key={service.title}
-                  className="border-s border-border has_fade_anim py-[25px] md:p-0"
+                  className="border-s border-border bg-white has_fade_anim py-[25px] md:p-0"
                 >
                   <ServiceCard6
                     service={{

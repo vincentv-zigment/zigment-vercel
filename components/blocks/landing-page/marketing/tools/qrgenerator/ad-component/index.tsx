@@ -17,7 +17,7 @@ const AdComponent = ({setOpenModal, loading, downloadQR}:Props) => {
     <>
         <div className='fixed top-0 left-0 w-screen h-screen  z-[1000]' onClick={()=>setOpenModal(false)} style={{background:'black', opacity:'50%'}}/>
         <div className="max-w-2xl max-h-screen fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full mx-auto  z-[2000] overflow-hidden space-y-8">
-            <div className='  bg-brand-orange-main text-white rounded-lg  shadow-lg p-2 text-center flex items-center justify-center gap-1'>
+            <div className='  bg-primary text-white rounded-lg  shadow-lg p-2 text-center flex items-center justify-center gap-1'>
                 {loading && <><Spinner color=''/>Your QR Code is being generated. Please do not refresh or close the window.</> }
                 {!loading && downloadCLicked && 'Done generating. Downloading your QR Code.'}
                 {!loading && !downloadCLicked && 'Click on Download'}
@@ -50,6 +50,7 @@ pitches, qualifies and converts leads 24/7
                         <Button 
                         variant={'primary'}
                         size={'sm'}
+                        className='flex-shrink-0'
                         onClick={()=>{
                             setDownloadClicked(true);downloadQR()
                         }}>

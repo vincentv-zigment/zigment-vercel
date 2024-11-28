@@ -31,6 +31,7 @@ export default function Example() {
     additionalInfo: "",
     agreeToTerms: false,
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [errors, setErrors] = useState<FormErrorsI>({});
   const { addToast } = useToast();
@@ -93,7 +94,7 @@ export default function Example() {
           source: Marketing_Lead_Source.CONTACT_US,
           source_detail: "CONTACTUS-PAGE",
         });
-        // setIsSubmitted(true)
+        setIsSubmitted(true);
         addToast("success", "Thank you for Submitting, Redirecting to  ");
         window.location.href = "/book-a-call";
       } catch (error) {
@@ -250,6 +251,11 @@ export default function Example() {
                   {loading ? <Spinner color="" /> : "Submit"}
                 </Button>
               </form>
+              {isSubmitted && (
+                <p className="  text-sm mt-4">
+                  Thank you for submitting the form. We will get back to you soon.
+                </p>
+              )}
             </div>
           </div>
         </div>

@@ -44,51 +44,56 @@ const ZigmentHero = () => {
 
   return (
     <>
-      <section className="pt-[150px] lg:pt-[155px] xl:pt-[240px] pb-[50px] xl:pb-[100px] text-center 
-      bg-[url('/hero-4.png')] bg-no-repeat bg-[#F9F6ED]
-       bg-cover relative	">
-      {/* <Image width={1000} height={1000} src={`/hero-2.png`} alt="hero-image" className="w-full h-full object-cover blur-sm	 absolute top-0" /> */}
-        <div className="container" ref={containerRef}>
+      <section className="pt-[150px] lg:pt-[155px] xl:pt-[240px] pb-[50px] xl:pb-[100px] text-center lg:bg-[url('/assets/imgs/background/bg.png')] bg-no-repeat bg-[#F9F6ED] bg-cover ">
+        <div className="container " ref={containerRef}>
           <div className="pb-[35px] md:pb-[50px] lg:pb-[100px]">
             <div className="max-w-3xl pb-[22px] mx-auto">
-              <h2 className="text-[18px] md:text-[36px] has_fade_anim text-white" >
-                <span className="text-white">
-                  {`The AI-Native Sales Engagement Platform`}
+              <h2 className="text-[16px]   md:text-[36px] has_fade_anim" >
+                <span className="text-gray-600 lg:text-black text-[16px]   md:text-[28px]">
+                  {`The AI-Native Agentic Sales Platform`}
                 </span>
               </h2>
             </div>
-            <div className="pb-[20px] has_fade_anim" data-delay="0.30">
+            <div className="py-10 lg:pt-0 lg:pb-[20px] has_fade_anim" data-delay="0.30">
               <div className="">
-                <h1 className="text-[50px] md:text-[70px] lg:text-[50px] xl:text-[100px] leading-none text-white relative inline">
+                <h1 className="text-[45px] md:text-[70px] lg:text-[50px] xl:text-[100px] leading-none font-black relative inline">
                   <Image
                     width={60}
                     height={70}
                     src="/assets/imgs/shape/shape-r-2.png"
-                    className="max-w-[21px] md:max-w-[60px] absolute -top-[11px] md:-top-[28px] -left-[22px] md:-left-[50px] text-xs invert"
+                    className="max-w-[21px] md:max-w-[60px] absolute -top-[11px] md:-top-[145px] -left-[22px] md:-left-[50px] text-xs"
                     alt="shape"
-
                   />
-                  <span className="text-white">
-                    {`Engagement, evolved`}
+                  <span className="lg:hidden">
+                    {`Engagement, evolved for`}
+                    <br className="hiiden lg:block" /> {` modern selling.`}
                   </span>
-                  <br className="hiiden lg:block" /> 
-                  <span className="text-white">
-                    {`for modern selling.`}
+                  <span className="hidden lg:inline-block">
+                    {`Engagement, evolved`}
+                    <br className="hiiden lg:block" /> {`for modern selling.`}
                   </span>
                 </h1>
               </div>
             </div>
             <div className="pb-[20px] md:pb-[43px] w-full max-w-5xl mx-auto">
               <p
-                className=" text-[20px]   text-white  leading-[1.36] has_fade_anim"
+                className=" text-[20px]  hidden lg:inline-block  text-primary leading-[1.36] has_fade_anim"
                 data-delay="0.45"
               >
-                {`Zigment nurtures every customer individually.  It works across all your conversation 
+                {`Zigment nurtures every customer individually.  
+                It works across all your conversation 
 channels like web-chat, SMS, Email or even social. It’s part tech, part magic.`}
+              </p>
+              <p
+                className=" text-[20px]  lg:hidden   text-primary leading-[1.36] has_fade_anim"
+                data-delay="0.45"
+              >
+                {`Zigment nurtures every customer individually. Works across all  
+channels.`}
               </p>
             </div>
             <div
-              className="flex justify-center gap-[20px] has_fade_anim"
+              className="flex justify-center py-10 lg:py-0 gap-[20px] has_fade_anim"
               data-delay="0.60"
             >
               <Link

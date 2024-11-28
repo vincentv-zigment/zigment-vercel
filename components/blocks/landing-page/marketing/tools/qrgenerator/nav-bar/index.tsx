@@ -14,9 +14,7 @@ const Navbar = ({ setCurrentPage, activeComponent,   }: NavbarProps) => {
 
       <nav
         className="bg-brand-orange-main p-4  mt-10"
-        style={{
-          fontFamily: '"Open Sans", sans-serif',
-        }}
+       
       >
         <div
           className="overflow-x-auto"

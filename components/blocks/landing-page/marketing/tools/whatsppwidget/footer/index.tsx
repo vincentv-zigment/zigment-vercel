@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
                 </svg>
               </Link>
               <Link
-                href="https://twitter.com/Zigment_ai"
+                href="https://x.com/Zigment_ai"
                 target="_blank"
                 aria-label="Follow us on Twitter"
               >

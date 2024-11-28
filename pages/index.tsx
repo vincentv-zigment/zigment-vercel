@@ -1,20 +1,21 @@
+import dynamic from 'next/dynamic';
 import MetaTagsComponents from "@/components/common/meta-tags-components";
-import Newsletter3 from "@/components/common/newsletter";
-import BlogSection from "@/components/sections/landing-page/blog-section";
-import Brand from "@/components/sections/landing-page/brand";
-import EnterpriseGradeAI from "@/components/sections/landing-page/enterprise-grade-AI";
-import FAQ from "@/components/sections/landing-page/FAQ";
-import GoLive from "@/components/sections/landing-page/go-live";
-import Integration2 from "@/components/sections/landing-page/integration2";
-import LeadConversion from "@/components/sections/landing-page/lead-conversion";
-import MeetZig from "@/components/sections/landing-page/meet-zig";
-import RealBusiness from "@/components/sections/landing-page/real-buisness";
-import Service from "@/components/sections/landing-page/service";
-import Testimonial from "@/components/sections/landing-page/testimonial";
-import WorkflowsSection from "@/components/sections/landing-page/workflows-section";
-import Counter from "@/components/sections/landing-page/zigment-counter";
-import ZigmentHero from "@/components/sections/landing-page/zigment-hero";
-import ZigmentRetention from "@/components/sections/landing-page/zigment-retention";
+import ZigmentHero from '@/components/sections/landing-page/zigment-hero';
+const Newsletter3 = dynamic(() => import('@/components/common/newsletter'));
+const Brand = dynamic(() => import('@/components/sections/landing-page/brand'));
+const Counter = dynamic(() => import('@/components/sections/landing-page/zigment-counter'));
+const Service = dynamic(() => import('@/components/sections/landing-page/service'));
+const RealBusiness = dynamic(() => import('@/components/sections/landing-page/real-buisness'));
+const LeadConversion = dynamic(() => import('@/components/sections/landing-page/lead-conversion'));
+const ZigmentRetention = dynamic(() => import('@/components/sections/landing-page/zigment-retention'));
+const Testimonial = dynamic(() => import('@/components/sections/landing-page/testimonial'));
+const MeetZig = dynamic(() => import('@/components/sections/landing-page/meet-zig'));
+const EnterpriseGradeAI = dynamic(() => import('@/components/sections/landing-page/enterprise-grade-AI'));
+const WorkflowsSection = dynamic(() => import('@/components/sections/landing-page/workflows-section'));
+const Integration2 = dynamic(() => import('@/components/sections/landing-page/integration2'));
+const GoLive = dynamic(() => import('@/components/sections/landing-page/go-live'));
+const FAQ = dynamic(() => import('@/components/sections/landing-page/FAQ'));
+const BlogSection = dynamic(() => import('@/components/sections/landing-page/blog-section'));
 
 export default function Home() {
   return (
@@ -37,12 +38,10 @@ export default function Home() {
         <MeetZig />
         <EnterpriseGradeAI />
         <WorkflowsSection />
-        {/* <Integration/> */}
         <Integration2 />
         <GoLive />
         <FAQ />
         <BlogSection />
-        {/* <BlogListingPage1/> */}
         <Newsletter3 />
       </main>
     </>

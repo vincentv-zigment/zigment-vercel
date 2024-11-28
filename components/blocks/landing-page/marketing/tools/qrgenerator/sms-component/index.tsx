@@ -20,7 +20,7 @@ const SmsComponent = ({ setQrValue }: Props) => {
         Your Phone Number
       </label>
       <input
-        className="border-2 focus:border-brand-orange-main outline-none focus:ring-0  px-2 rounded w-full  "
+        className="border-2 focus:border-brand-orange-main outline-none focus:ring-0  p-2 rounded w-full  "
         placeholder="+91 9999999999"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
@@ -29,7 +29,7 @@ const SmsComponent = ({ setQrValue }: Props) => {
         Message
       </label>
       <textarea
-        className="border-2 focus:border-brand-orange-main outline-none focus:ring-0  px-2 rounded w-full  "
+        className="border-2 focus:border-brand-orange-main outline-none focus:ring-0  p-2 rounded w-full  "
         placeholder="Your message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}

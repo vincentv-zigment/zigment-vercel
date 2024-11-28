@@ -47,13 +47,14 @@ const LeverageSection = () => {
                 <Image 
                     width={520} 
                     height={560} 
-                    src={`/assets/imgs/ctwa/img-r-22.webp`} 
+                    src={`/assets/imgs/ctwa/leverage-section/img-r-22(2).png`} 
                     alt="img" 
                 />
                 <Image
                   width={235}
                   height={260}
-                  src={`/assets/imgs/ctwa/img-r-23.webp`}
+                  src={`/assets/imgs/ctwa/leverage-section/img-r-23(2).png`}
+                  
                   className="absolute -end-[50px] md:-end-[115px] bottom-[38px] md:bottom-[90px] max-w-[150px] md:max-w-full drop-shadow-[0_0_100px_#EBEDEF]"
                   alt="image"
                   data-speed="0.85"

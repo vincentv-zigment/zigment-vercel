@@ -84,7 +84,9 @@ const QRCodeMain = ({
   }, [setSelectedImageUrl]);
 
   return (
-    <div className="w-full md:w-3/4  bg-gray-2 p-4 md:p-8 space-y-2 rounded-lg">
+    <div className="w-full md:w-3/4  bg-gray-2 p-4 md:p-8 space-y-2 rounded-lg"
+      style={{fontFamily: 'Poppins, sans-serif'}}
+    >
     <Accordion
       icon={CurrentComponent ? CurrentComponent.icon : navItems[0].icon}
       title={"ENTER CONTENT"}

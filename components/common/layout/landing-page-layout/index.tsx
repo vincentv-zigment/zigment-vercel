@@ -14,7 +14,7 @@ const LandingPageLayout = ({ children }: Props) => {
 
   if (
     ["/tools/whatspp-widget","/demo" , "/tools/easy-copy-extension",  "/workflows-of-the-future", "/lp/ivf", "/demo"].includes(router.pathname) ||
-    router.pathname.includes("/tools/qr-code-generator")
+    router.pathname.includes("/tools")
   ) {
     return (
       <ChatBotTriggerProvider>

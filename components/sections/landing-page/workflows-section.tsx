@@ -63,12 +63,55 @@ const WorkflowsSection = () => {
                 <strong>Service as a Software!</strong>{" "}
               </p>
             </div>
+            <div className="relative max-w-full lg:max-w-[630px] rounded-[40px] mx-auto bg-[#FAFAFA] mt-[50px] md:mt-0 p-0 md:px-[50px] md:py-[60px] block md:hidden">
+            <Image
+              width={492}
+              height={542}
+              src={`/assets/imgs/workflow-section/z_web_IG-04.png`}
+              alt="community-thumb"
+              className="drop-shadow-md"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={`/assets/imgs/workflow-section/enduser.svg`}
+              data-speed="0.8"
+              className="absolute w-[200px] sm:w-[300px] drop-shadow-lg  object-contain top-6 md:top-[60px] md:right-auto md:left-1/4"
+              alt="end-use-thumb"
+            />
+            <div className="h-[80px] sm:h-[130px] max-w-full lg:max-w-[630px] flex items-center justify-center  absolute top-1/2 -translate-y-1/2 gap-2   left-1/2 -translate-x-1/2">
+              <Image
+                width={500}
+                height={500}
+                src={`/assets/imgs/workflow-section/intgration.svg`}
+                data-speed=""
+                className="  w-auto h-full drop-shadow-lg  object-contain  "
+                alt="integration-thumb"
+              />
+              <Image
+                width={205}
+                height={120}
+                src={`/assets/imgs/workflow-section/dash.svg`}
+                data-speed=""
+                className=" w-auto h-full drop-shadow-lg right-2 "
+                alt="dashboard-thumb"
+              />
+            </div>
+            <Image
+              width={500}
+              height={500}
+              src={`/assets/imgs/workflow-section/superviosn.svg`}
+              data-speed="1.2"
+              className="absolute w-[150px] sm:w-[250px] drop-shadow-lg h-auto object-contain left-1/2 -translate-x-1/2 bottom-10 lg:bottom-[120px] md:bottom-[150px]"
+              alt="community-thumb"
+            />
+          </div>
             <div>
               <Accordion
                 type="single"
                 collapsible
                 className="w-full mt-[43px] border-t border-border has_fade_anim"
-                defaultValue="item-2"
+                defaultValue="item-1"
               >
                 {services.map((item, i) => (
                   <AccordionItem
@@ -87,7 +130,7 @@ const WorkflowsSection = () => {
               </Accordion>
             </div>
           </div>
-          <div className="relative max-w-full lg:max-w-[630px] rounded-[40px] mx-auto bg-[#FAFAFA] mt-[50px] md:mt-0 p-0 md:px-[50px] md:py-[60px]">
+          <div className="relative max-w-full lg:max-w-[630px] rounded-[40px] mx-auto bg-[#FAFAFA] mt-[50px] md:mt-0 p-0 md:px-[50px] md:py-[60px] hidden md:block">
             <Image
               width={492}
               height={542}
