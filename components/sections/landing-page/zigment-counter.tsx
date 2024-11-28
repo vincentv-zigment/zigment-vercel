@@ -71,8 +71,8 @@ const Counter = ( ) => {
                     alt="shape"
                   />
               </div>
-              <div className="relative flex justify-center md:justify-end md:-right-8">
-                  <Image width={1000} height={1000} className="w-[300px] h-auto object-contain"  src={'/assets/imgs/counter/z_web_IG_phone _mock_1.svg'} alt="shape" />
+              <div className="relative flex justify-center md:justify-end md:-right-20 pb-16">
+                  <Image width={1000} height={1000} className="w-[420px] h-auto object-contain"  src={'/assets/imgs/counter/edhfjk.png'} alt="shape" />
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Counter = ( ) => {
                   />
               </div>
               <div className="relative flex justify-center md:justify-end md:-right-8">
-                  <Image width={1000} height={1000} className="w-[300px] h-auto object-contain"  src={'/assets/imgs/counter/z_web_IG_phone _mock_1.svg'} alt="shape" />
+                  <Image width={1000} height={1000} className="w-[300px] h-auto object-contain"  src={'/assets/imgs/counter/edhfjk.png'} alt="shape" />
               </div>
             </div>
             <div className="space-y-4 pb-[30px] md:pb-[55px] w-full has_fade_anim">
