@@ -103,13 +103,13 @@ const Index = ({ data }: Props) => {
         </div>
 
         {/* navigation */}
-        <div className="flex items-center gap-4 justify-center mx-auto text-center overflow-x-hidden w-full max-w-5xl  ">
+        <div className="flex items-center gap-4 justify-center mx-auto text-center md:overflow-x-hidden overflow-x-scroll w-full max-w-5xl  ">
           <button onClick={() => scrollCategoryList("left")} className="p-2">
             <ChevronLeft />
           </button>
           <div
             id="category-list"
-            className="flex items-center gap-4 overflow-x-hidden"
+            className="flex items-center gap-4 md:overflow-x-hidden overflow-x-scroll hide-scrollbar"
           >
             <button
               className={classNames(

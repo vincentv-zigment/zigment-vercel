@@ -37,16 +37,18 @@ const Offcanvas = ({ headerNav, actionBtnClassName }: Props) => {
           <FaBars className={cn("w-6 h-6", actionBtnClassName)} />
         </button>
       </DrawerTrigger>
-      <DrawerContent className="bg-primary rounded-none p-[30px] overflow-hidden top-0 mt-0 w-full md:w-1/2 z-[999]">
-        <DrawerClose asChild>
-          <button
-            aria-label="Close menu"
-            className="relative w-[30px] md:w-[50px] h-[30px] min-h-[30px] md:h-[50px] md:min-h-[50px] rounded-full bg-primary border border-[#333337]"
-          >
-            <span className="w-3 md:w-[22px] h-[1px] inline-block bg-white absolute left-[50%] top-[50%] -translate-x-[50%] rotate-45"></span>
-            <span className="w-3 md:w-[22px] h-[1px] inline-block bg-white absolute left-[50%] top-[50%] -translate-x-[50%] -rotate-45"></span>
-          </button>
-        </DrawerClose>
+      <DrawerContent className="bg-primary rounded-none p-[30px] overflow-hidden top-0 mt-0 w-full md:w-1/2 z-[999] border-2 border-primary">
+      <div className="flex items-center justify-end">
+          <DrawerClose asChild className="">
+            <button
+              aria-label="Close menu"
+              className="relative w-[30px] md:w-[50px] h-[30px] min-h-[30px] md:h-[50px] md:min-h-[50px] rounded-full bg-primary border border-[#333337]"
+            >
+              <span className="w-3 md:w-[22px] h-[1px] inline-block bg-white absolute left-[50%] top-[50%] -translate-x-[50%] rotate-45"></span>
+              <span className="w-3 md:w-[22px] h-[1px] inline-block bg-white absolute left-[50%] top-[50%] -translate-x-[50%] -rotate-45"></span>
+            </button>
+          </DrawerClose>
+      </div>
         {headerNav && headerNav.length && (
           <nav className="mt-[30px] mb-[40px] overflow-y-scroll">
             {headerNav.map((item, i) => (

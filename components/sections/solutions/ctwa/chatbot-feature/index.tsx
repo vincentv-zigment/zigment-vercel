@@ -9,21 +9,27 @@ import { useGSAP } from "@gsap/react";
 // lib
 import TitleSection2 from "@/components/common/title-section/title-section2";
 import { delayTime2 } from "@/lib/helper/delayTime";
+import Image from "next/image";
 
 // components
 
 const items = [
   {
     title: "More Effort, Poor ROI",
-    description: "Takes significant man-hours and builds legacy code to run and manage"
+    description: "Takes significant man-hours and builds legacy code to run and manage",
+    image:'/assets/imgs/ctwa/chatbot-feature/1.png'
   },
   {
     title: "High Drop-offs",
-    description: "Pre-scripted flows feel very robotic and transactional, failing to engage users"
+    description: "Pre-scripted flows feel very robotic and transactional, failing to engage users",
+    image:'/assets/imgs/ctwa/chatbot-feature/2.png'
+
   },
   {
     title: "Poor Lead Quality",
-    description: "Unengaged users result in low conversion intent and poor lead quality"
+    description: "Unengaged users result in low conversion intent and poor lead quality",
+    image:'/assets/imgs/ctwa/chatbot-feature/3.png'
+
   }
 ];
 
@@ -57,6 +63,7 @@ const ChatbotFeature = () => {
                 data-delay={delayTime2(i + 1)}
               >
                 <span className=" bg-sec_bg rounded-full inline-block w-20 h-20 mb-[10px] md:mb-[20px] lg:mb-[42px]">
+                  <Image src={item.image} width={100} height={100}  alt="image" className="w-full h-full object-contain"/>
                 </span>
                 <h3 className="text-[18px] md:text-[20px] lg:text-[24px] mb-[5px] md:mb-[10px] lg:mb-[18px] font-semibold  leading-[1.33]">
                   {item.title}
