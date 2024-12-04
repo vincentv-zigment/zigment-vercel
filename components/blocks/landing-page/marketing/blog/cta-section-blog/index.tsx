@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Marketing_Lead_Source } from "@/lib/types/ui";
 import Spinner from "@/components/common/loaders/spinner";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   data: BlogI;
@@ -48,22 +49,20 @@ const CTASectionblog = ({ data }: Props) => {
             <div className="rounded-md w-full flex flex-col md:flex-row items-center relative gap-4 md:px-10 justify-center lg:justify-center">
               <input
                 type="text"
-                className="block w-full rounded-md px-2    sm:py-3 py-2  shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="block w-full rounded-[15px] px-4 border border-border    sm:py-3 py-2  shadow-sm focus:border-indigo-500 focus:ring-indigo-500  sm:text-sm"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <button
-                className=" w-full md:w-36 h-12 flex items-center justify-center shrink-0 bg-brand-orange-main hover:bg-red-500 rounded-md text-white font-medium sm:font-semibold px-4 sm:px-8 disabled:bg-brand-orange-main/50 disabled:cursor-not-allowed	  sm:py-3 py-2 text-sm sm:text-base"
-                onClick={handleSubmit}
-              >
-                {loading ? (
+              <Button variant={'primary'} size={'sm'} onClick={handleSubmit}>
+              {loading ? (
                   <span className="w-full  pl-3   flex items-center justify-center">
                     <Spinner color="" />
                   </span>
                 ) : (
                   "Submit"
                 )}
-              </button>
+              </Button>
+               
             </div>
             <div className="mx-auto max-w-7xl  py-4">
               <h2 className="lg:text-center md:text-lg font-semibold text-center leading-8 text-gray-900">

@@ -15,9 +15,7 @@ input:-webkit-autofill:focus {
 }
 
 .markdown-content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'tropiline', sans-serif;
   font-size: 1rem;
   p {
     font-size: medium;
@@ -29,24 +27,24 @@ input:-webkit-autofill:focus {
   ul {
     list-style-type: disc;
     padding-left: 2.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    
   }
 
-  li {
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
-  }
-
+ 
   ol {
     list-style-type: decimal;
-    list-style-position: inside;
+    list-style-position: outside;
+    font-family: "DM Sans", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   h1 {
     font-weight: bold;
     font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'tropiline', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     @media (min-width: 768px) {
       font-size: 3rem;
@@ -54,11 +52,10 @@ input:-webkit-autofill:focus {
   }
 
   h2 {
-    font-weight: 600;
+    font-weight: medium;
     font-size: 1.25rem;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    font-family: 'Montserrat', sans-serif;
 
     @media (min-width: 768px) {
       font-size: 2rem;
@@ -67,7 +64,7 @@ input:-webkit-autofill:focus {
 
 
   h3 {
-    font-weight: 600;
+    font-weight: medium;
     font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -76,8 +73,11 @@ input:-webkit-autofill:focus {
       font-size: 1.5rem;
     }
   }
+   
   li {
-    padding: 0.25rem;
+    font-family: "DM Sans", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   table {

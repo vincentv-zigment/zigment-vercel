@@ -17,48 +17,50 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TitleSection2 from "@/components/common/title-section/title-section2";
 
 // components
- 
+
 const tab_lists = [
-    {
-        key:'tab1',
-        name: 'Realtime performance',
-        image: '/assets/imgs/ctwa/icon-r-27.webp',
-    },
-    {
-        key:'tab2',
-        name: 'Lead funnel status',
-        image: '/assets/imgs/ctwa/icon-r-28.webp',
-    },
-    {
-        key:'tab3',
-        name: 'Lead engagement',
-        image: '/assets/imgs/ctwa/icon-r-29.webp',
-    },
-]
+  {
+    key: "tab1",
+    name: "Realtime performance",
+    image: "/assets/imgs/ctwa/icon-r-27.webp",
+  },
+  {
+    key: "tab2",
+    name: "Lead funnel status",
+    image: "/assets/imgs/ctwa/icon-r-28.webp",
+  },
+  {
+    key: "tab3",
+    name: "Lead engagement",
+    image: "/assets/imgs/ctwa/icon-r-29.webp",
+  },
+];
 
 const tab_content = [
   {
-    key: 'tab1',
-    title: 'Realtime performance updates of your campaigns',
-    content: 'Get a macro view of your Meta-linked campaigns and a micro view of all the user engagement at all times. Track progress and download reports any time.',
-    image: '/assets/imgs/ctwa/automatic-marketing/dashboard1.png',
+    key: "tab1",
+    title: "Realtime performance updates of your campaigns",
+    content:
+      "Get a macro view of your Meta-linked campaigns and a micro view of all the user engagement at all times. Track progress and download reports any time.",
+    image: "/assets/imgs/ctwa/automatic-marketing/dashboard1.png",
   },
   {
-    key: 'tab2',
-    title: 'Lead funnel status for each & every click',
-    content: 'Watch each lead pass though your sales funnel and progress in real time. Each conversation gets automatically tagged with the correct status update and raise alerts if required.',
-    image: '/assets/imgs/ctwa/automatic-marketing/contact-page.png',
+    key: "tab2",
+    title: "Lead funnel status for each & every click",
+    content:
+      "Watch each lead pass though your sales funnel and progress in real time. Each conversation gets automatically tagged with the correct status update and raise alerts if required.",
+    image: "/assets/imgs/ctwa/automatic-marketing/contact-page.png",
   },
   {
-    key: 'tab3',
-    title: 'Conversation summary & lead engagement advice',
-    content: 'Get a complete summary of every conversation added to your CRM or contact center software. Also get the relevant closure advice for your calling executives to build context and close better.',
-    image: '/assets/imgs/ctwa/automatic-marketing/chat-summary.png',
+    key: "tab3",
+    title: "Conversation summary & lead engagement advice",
+    content:
+      "Get a complete summary of every conversation added to your CRM or contact center software. Also get the relevant closure advice for your calling executives to build context and close better.",
+    image: "/assets/imgs/ctwa/automatic-marketing/chat-summary.png",
   },
-]
+];
 
 const AutomatedMarketing = () => {
-
   const containerRef = useRef<HTMLDivElement>(null!);
 
   useGSAP(
@@ -98,7 +100,6 @@ const AutomatedMarketing = () => {
                         height={55}
                         src={tab.image}
                         alt="icon image"
-                        
                       />
                     </div>
                     <p className="text-[14px] md:text-[20px] leading-[1.12] text-primary font-semibold has_fade_anim">
@@ -109,7 +110,11 @@ const AutomatedMarketing = () => {
               ))}
             </TabsList>
             {tab_content.map((tab, i) => (
-              <TabsContent key={`tab_content-${i}`} value={tab.key} className="min-h-[400px]">
+              <TabsContent
+                key={`tab_content-${i}`}
+                value={tab.key}
+                className="min-h-[400px]"
+              >
                 <div className="grid grid-cols-1 lg:grid-cols-[auto_450px] 2xl:grid-cols-[auto_550px] gap-[20px] md:gap-[30px] lg:gap-[40px] p-0 2xl:px-[60px]  ">
                   <div>
                     <h2 className="text-[22px] xl:text-[40px] leading-tight has_fade_anim">
@@ -118,7 +123,7 @@ const AutomatedMarketing = () => {
                     <p className="my-[20px] has_fade_anim">{tab.content}</p>
                     <div className="my-[32px] has_fade_anim">
                       <Link
-                        href="#"
+                        href={"/contact-us"}
                         className={cn(
                           buttonVariants({ variant: "primary2" }),
                           "text-[16px]"
@@ -133,7 +138,7 @@ const AutomatedMarketing = () => {
                       width={500}
                       height={500}
                       src={tab.image}
-                      className={`h-auto w-full object-contain rounded overflow-hidden   ${i!==2 && 'rounded-lg'}`}
+                      className={`h-auto w-full object-contain   overflow-hidden    `}
                       alt="gallery image"
                     />
                   </div>

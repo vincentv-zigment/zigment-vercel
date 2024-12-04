@@ -17,7 +17,7 @@ const MarkdownToHTML = ({ content }: Props) => {
 
     },
     img: ({ src, alt }: any) => (
-      <Image src={src} alt={alt} width={100} height={100} className="w-full h-full" />
+      <Image src={src} alt={alt} width={500} height={500} className="w-full h-full my-10" />
     ),
     customComponent: () => <CTASection />,
     strong:(props:any)=>{
@@ -40,6 +40,7 @@ const MarkdownToHTML = ({ content }: Props) => {
           [&_h1]:font-bold
           [&_h1]:md:text-3xl
           [&_h1]:text-2xl
+          [&_h1]:mt-10
           [&_h2]:font-semibold
           [&_h2]:md:text-2xl
           [&_h2]:text-xl

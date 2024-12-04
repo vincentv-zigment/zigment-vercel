@@ -41,24 +41,22 @@ const LeverageSection = () => {
   return (
     <section className="sec_space_bottom4">
       <div className="container" ref={containerRef}>
-        <div className="grid grid-cols-1 lg:grid-cols-11 gap-y-[60px] justify-between">
-          <div className="col-span-1 lg:col-span-6 order-2 lg:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-11 gap-y-[60px] justify-between has_fade_anim">
+          <div className="col-span-1 lg:col-span-6 order-2 lg:order-1 ">
             <div className="relative max-w-[250px] md:max-w-[70%] lg:max-w-[350px] xl:max-w-[520px] mb-[20px] md:mb-0">
-                <Image 
-                    width={520} 
-                    height={560} 
-                    src={`/assets/imgs/ctwa/leverage-section/img-r-22(2).png`} 
-                    alt="img" 
-                />
-                <Image
-                  width={235}
-                  height={260}
-                  src={`/assets/imgs/ctwa/leverage-section/img-r-23(2).png`}
-                  
-                  className="absolute -end-[50px] md:-end-[115px] bottom-[38px] md:bottom-[90px] max-w-[150px] md:max-w-full drop-shadow-[0_0_100px_#EBEDEF]"
-                  alt="image"
-                  data-speed="0.85"
-                />
+            <div className="relative max-w-full lg:max-w-[630px] h-auto lg:h-[75%] rounded-[40px] mx-auto   mt-[50px] md:mt-0 p-0 lg:p-4   hidden md:block">
+              {/* Add a video here replacing the images */}
+              <video
+                width="300"
+                height="auto"
+                autoPlay
+                muted
+                className="w-full lg:w-[350px] mx-auto h-auto rounded-[40px]"
+              >
+                <source src="/assets/imgs/zigment-retention/Zigment-ai-chat-v8.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+          </div>
             </div>
           </div>
           <div className="col-span-1 lg:col-span-5 ms-0 lg:ms-[30px] order-1 lg:order-2">

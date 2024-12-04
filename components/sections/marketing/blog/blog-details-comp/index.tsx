@@ -1,7 +1,7 @@
 
 import BlogBreadCrumbs from '@/components/blocks/landing-page/marketing/blog/blog-bread-crumbs';
 import CTASectionblog from '@/components/blocks/landing-page/marketing/blog/cta-section-blog';
-import MarkdownToHTML from '@/components/common/markdown-to-html';
+import MarkdownToHTML3 from '@/components/common/markdown-to-html3';
 import CTASection from '@/components/common/marketing/landing-page/cta-section';
 import { BlogI } from '@/lib/types/blog';
 import Image from 'next/image';
@@ -29,10 +29,11 @@ const BlogDetailComp = ({ data, blog_content }: Props) => {
 
   const blogUrl = encodeURIComponent(`https://www.zigment.ai/blog/${slug}`)
 
+  // const router
+
   return (
     <>
       <section className='pt-4 md:pt-16 sm:px-20 xl:px-0 lg:max-w-7xl mx-auto'>
-
         <BlogBreadCrumbs data={data} />
         <div className=' mx-auto w-full md:max-w-2xl lg:max-w-3xl '>
           <div className=' bg-white rounded-md flex w-full flex-col justify-center p-8 md:px-10 md:py-[35px]  mx-auto      items-center 
@@ -69,7 +70,7 @@ const BlogDetailComp = ({ data, blog_content }: Props) => {
             </div>
 
             <Image src={cover_image} alt='' width={500} height={500} className='w-full h-[400px] object-cover rounded-xl' />
-            <MarkdownToHTML content={blog_content} />
+            <MarkdownToHTML3 content={blog_content} />
             <CTASectionblog data={data} />
             <div className='flex items-center justify-center gap-4 pb-4   '>
               <span className='font-semibold'>Share :</span>

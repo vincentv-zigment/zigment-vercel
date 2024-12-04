@@ -16,33 +16,33 @@ const features = [
   {
     name: "No Flows Required",
     details: "Zigment AI is smart and capable of handling any kind of conversation",
-    icon: "/assets/imgs/ctwa/icon-r-20.webp",
+    icon: "/assets/imgs/ctwa/icon-r-20.png",
   },
   {
     name: "Multi-Lingual",
     details: "We cover Indian languages with english or native script",
-    icon: "/assets/imgs/ctwa/icon-r-21.webp",
+    icon: "/assets/imgs/ctwa/icon-r-21.png",
   },
   {
     name: "Omnichannel",
     details: "Can be deployed on Chat, SMS, Email, Phone Calls & Social Media",
-    icon: "/assets/imgs/ctwa/icon-r-22.webp",
+    icon: "/assets/imgs/ctwa/icon-r-22.png",
   },
   {
     name: "Conversion API",
     details: "Passes the ad performance data back for campaigns optimization",
-    icon: "/assets/imgs/ctwa/icon-r-23.webp",
+    icon: "/assets/imgs/ctwa/icon-r-23-1.png",
 
   },
   {
-    name: "Quick deployment",
+    name: "Quick Deployment",
     details: "Go live in days instead of months. we usually deploy in 3-5 days",
-    icon: "/assets/imgs/ctwa/icon-r-24.webp",
+    icon: "/assets/imgs/ctwa/icon-r-24.png",
   },
   {
     name: "Fully Managed",
     details: "We manage the entire setup with zero effort from your team",
-    icon: "/assets/imgs/ctwa/icon-r-25.webp",
+    icon: "/assets/imgs/ctwa/icon-r-25.png",
   },
 ];
 

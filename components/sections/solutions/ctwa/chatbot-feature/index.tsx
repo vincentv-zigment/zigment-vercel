@@ -17,18 +17,18 @@ const items = [
   {
     title: "More Effort, Poor ROI",
     description: "Takes significant man-hours and builds legacy code to run and manage",
-    image:'/assets/imgs/ctwa/chatbot-feature/1.png'
+    image:'/assets/imgs/ctwa/chatbot-feature/poor-roi.png'
   },
   {
     title: "High Drop-offs",
     description: "Pre-scripted flows feel very robotic and transactional, failing to engage users",
-    image:'/assets/imgs/ctwa/chatbot-feature/2.png'
+    image:'/assets/imgs/ctwa/chatbot-feature/high-dropoffs2.png'
 
   },
   {
     title: "Poor Lead Quality",
     description: "Unengaged users result in low conversion intent and poor lead quality",
-    image:'/assets/imgs/ctwa/chatbot-feature/3.png'
+    image:'/assets/imgs/ctwa/chatbot-feature/poor-lead-quality.png'
 
   }
 ];
@@ -59,7 +59,7 @@ const ChatbotFeature = () => {
             {items.map((item, i) => (
               <div
                 key={`startup_process-${i}`}
-                className="p-[25px] md:p-0 border border-border rounded-theme md:border-0 first:ml-0 first:lg:ml-[30px] has_fade_anim flex flex-col items-center justify-center text-center"
+                className="p-[25px] md:p-0 border border-border rounded-theme md:border-0  has_fade_anim flex flex-col items-center justify-center text-center"
                 data-delay={delayTime2(i + 1)}
               >
                 <span className=" bg-sec_bg rounded-full inline-block w-20 h-20 mb-[10px] md:mb-[20px] lg:mb-[42px]">

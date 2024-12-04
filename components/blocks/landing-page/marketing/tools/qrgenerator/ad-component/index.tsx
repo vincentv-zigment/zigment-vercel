@@ -31,7 +31,7 @@ const AdComponent = ({setOpenModal, loading, downloadQR}:Props) => {
                     <video
                         autoPlay
                         muted
-                        loop
+                        loop={true}
                         className="w-full border-2 border-gray-300 h-full object-contain rounded-md"
                     >
                     <source

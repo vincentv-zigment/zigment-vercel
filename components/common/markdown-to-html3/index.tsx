@@ -12,7 +12,7 @@ const MarkdownToHTML3 = ({ content }: Props) => {
   };
 
   return (
-    <div className='markdown-content' style={{fontFamily:`'Roboto', sans-serif`}}>
+    <div className='markdown-content' >
       <ReactMarkdown components={renderers}>
         {content}
       </ReactMarkdown>

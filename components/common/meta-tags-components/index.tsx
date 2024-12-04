@@ -12,6 +12,15 @@ type Props = {
 
 const MetaTagsComponents = ({ title, description, keywords, url }: Props) => {
   const router = useRouter();
+
+  // Ensure absolute URLs
+
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://zigment.ai";
+  const canonicalUrl = url;
+  const imageUrl = `${baseUrl}/Zigment_logo-black.svg`;
+
+  // Calculate language based on route or default to en
+
   return (
     <>
       <Head>
@@ -20,12 +29,17 @@ const MetaTagsComponents = ({ title, description, keywords, url }: Props) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
 
+        {/* Always include canonical URL */}
+        <link rel="canonical" href={canonicalUrl} />
+
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={imageUrl} />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content={url} />
-        <meta property="og:image" content="/Zigment_logo-black.svg" />
+
+        <meta property="og:image:alt" content={title} />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -37,7 +51,7 @@ const MetaTagsComponents = ({ title, description, keywords, url }: Props) => {
         <meta property="twitter:site" content={process.env.SOCIAL_HANDLE} />
         <meta property="twitter:image" content="/Zigment_logo-black.svg" />
       </Head>
-      {(![
+      {![
         "/tools/whatspp-widget",
         "/demo",
         "/tools/easy-copy-extension",
@@ -45,9 +59,9 @@ const MetaTagsComponents = ({ title, description, keywords, url }: Props) => {
         "/lp/ivf",
         "/demo",
         "/tools/url-shortner",
-        "/tools/qr-code-generator/url-qr-code"
-      ].includes(router.pathname) && 
-      !router.pathname.includes("/tools")) && <ScrollSmootherComponent />}
+        "/tools/qr-code-generator/url-qr-code",
+      ].includes(router.pathname) &&
+        !router.pathname.includes("/tools") && <ScrollSmootherComponent />}
     </>
   );
 };

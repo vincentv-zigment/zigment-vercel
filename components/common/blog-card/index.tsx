@@ -18,13 +18,12 @@ type Props = {
 const BlogCard1 = ({ blog, allowBtn = true }: Props) => {
   return (
     <article className="">
-      <div className="rounded-theme overflow-hidden">
+      <div className="rounded-theme overflow-hidden aspect-[3/2]">
         <Link href={`/blog/${blog.slug}`}>
           <Image
             width={400}
             height={300}
-            style={{ height: "auto", aspectRatio: "3/2" }}
-            className="object-cover"
+            className="object-cover w-full h-full"
             src={blog.cover_image}
             alt="blog image"
           />
