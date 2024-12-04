@@ -39,17 +39,24 @@ const CTWAHero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-12 gap-y-[25px] md:gap-y-[50px]">
           <div className="col-span-1 xl:col-span-5">
             <h1 className="pb-[20px] md:pb-[30px] text-[35px] md:text-[50px] xl:text-[56px] !leading-[0.9] has_fade_anim">
-              {`The Most Advanced 
-AI-Powered Solution 
+            The Most Advanced 
+AI <span className="line-through">Chat</span> Sales Agents 
 For CTWA Campaigns
-`}
+
             </h1>
             <p
-              className="pb-[20px] md:pb-[40px] has_fade_anim"
+              className="pb-[20px] md:pb-[40px] has_fade_anim hidden md:block"
               data-delay="0.30"
             >
-              {`Zigment delivers the next generation of truly AI-native chat agents that 
-drive your whatsapp campaigns on Meta, massively profitable.
+              {`Zigment delivers the next generation of AI-native chat agents 
+to drive campaigns on Meta, massively profitable`}
+            </p>
+            <p
+              className="pb-[20px] md:pb-[40px] has_fade_anim md:hidden"
+              data-delay="0.30"
+            >
+              {`Drive your CTWA campaigns to success with 
+Zigment’s Sales trained AI agents
 `}
             </p>
             <div
@@ -75,7 +82,7 @@ drive your whatsapp campaigns on Meta, massively profitable.
                   <FaPlay />
                 </div>
                 <p className="text-[16px] font-bold text-primary">
-                  How it works
+                  Watch Demo
                 </p>
               </div>
             </div>

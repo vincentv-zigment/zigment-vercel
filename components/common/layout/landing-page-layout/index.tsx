@@ -26,7 +26,7 @@ const LandingPageLayout = ({ children }: Props) => {
            
           <div id="smooth-wrapper">
             <div id="smooth-content">
-              <div>{children}</div>
+              <div className=" ">{children}</div>
 
               <Footer />
             </div>
@@ -50,7 +50,7 @@ const LandingPageLayout = ({ children }: Props) => {
           />
           <div id="smooth-wrapper">
             <div id="smooth-content">
-              <div>{children}</div>
+              <div className=" ">{children}</div>
 
               <Footer />
             </div>

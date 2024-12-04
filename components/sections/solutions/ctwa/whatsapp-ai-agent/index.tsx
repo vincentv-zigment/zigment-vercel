@@ -15,7 +15,7 @@ import { delayTime2 } from "@/lib/helper/delayTime";
 const features = [
   {
     name: "No Flows Required",
-    details: "Zigment AI is smart and capable of handling any kind of conversation",
+    details: "Feed data  and set the objective. Agents adapt with every user",
     icon: "/assets/imgs/ctwa/icon-r-20.png",
   },
   {
@@ -25,7 +25,7 @@ const features = [
   },
   {
     name: "Omnichannel",
-    details: "Can be deployed on Chat, SMS, Email, Phone Calls & Social Media",
+    details: "Can be deployed on Whatsapp, Web Chat, Insta, FB, SMS, email",
     icon: "/assets/imgs/ctwa/icon-r-22.png",
   },
   {

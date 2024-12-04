@@ -1,21 +1,18 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 // gsap
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import { useGSAP } from "@gsap/react";
 
 // shadcn components
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 
 // components
 import Title1 from "@/components/common/title/title1";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
  
 
 const items = [
@@ -50,6 +47,15 @@ const certifiaction_logos = [
 const EnterpriseGradeAI = ( ) => {
 
   const containerRef = useRef<HTMLDivElement>(null!);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+  };
 
   useGSAP(
     () => {
@@ -72,16 +78,43 @@ const EnterpriseGradeAI = ( ) => {
                   )
                 })}
               </div>
-        <Carousel
-          dir="ltr"
-          opts={{
-            duration: 60,
-          }}
-          className="w-full mt-[51px] 2xl:mt-[61px] mx-auto has_fade_anim"
+        <div className="w-full p-2 relative mt-[51px] 2xl:mt-[61px] mx-auto has_fade_anim md:hidden">
+          <div className="flex overflow-hidden">
+            {items.map((item, i) => (
+              <div
+                key={`carousel_item-${i}`}
+                className={`flex-shrink-0 w-full h-[360px] transition-transform duration-500 ${i === currentIndex ? 'block' : 'hidden'}`}
+              >
+                <div className="p-[25px] lg:p-[45px] bg-white border border-border rounded-theme h-full">
+                  <div className="flex flex-col justify-center items-center gap-[20px]">
+                    <div className="w-[84px] h-[84px] inline-flex items-center rounded-full justify-center bg-gray-100">
+                      <Image alt={item.title} width={100} height={100} src={item.logo} className="text-primary w-16 h-16 object-fit"/>
+                    </div>
+                    <div>
+                      <h2 className="text-[22px] leading-none">
+                        {item.title}
+                      </h2>
+                    </div>
+                  </div>
+                  <p className="text-[19px] text-center 2xl:text-[22px] leading-[1.36] mt-[36px]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="w-full flex items-center justify-between mt-4">
+            <Button onClick={handlePrev}><BsArrowLeft className="w-6 h-6"/></Button>
+            <Button onClick={handleNext}><BsArrowRight  className="w-6 h-6"/></Button>
+          </div>
+        </div>
+        <div
+         
+          className="w-full mt-[51px] 2xl:mt-[61px] mx-auto has_fade_anim hidden md:block"
         >
-          <CarouselContent className="gap-[14px]">
+          <div className="gap-10 grid grid-cols-3">
              { items.map((item, i) => (
-                <CarouselItem
+                <div
                   key={`testimonial_item-${i}`}
                   className="md:basis-1/2 lg:basis-1/3"
                 >
@@ -103,10 +136,10 @@ const EnterpriseGradeAI = ( ) => {
                     </p>
                     
                   </div>
-                </CarouselItem>
+                </div>
               ))}
-          </CarouselContent>
-        </Carousel>
+          </div>
+        </div>
       </div>
     </section>
   );

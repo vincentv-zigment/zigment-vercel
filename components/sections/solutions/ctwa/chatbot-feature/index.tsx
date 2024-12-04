@@ -50,7 +50,9 @@ const ChatbotFeature = () => {
        
       <div className="container" ref={containerRef}>
         <TitleSection2
-          title={`Current flow-based chatbots are anything but AI and hardly affective`}
+          title={`Existing chatbots are anything but AI 
+and hardly affective
+`}
           details={<>{`Your CTWA campaigns aren’t successful because your current`} <br></br> solutions are stuck in the past</>}
           titleClassName="max-w-6xl"
           detailsClassName="max-w-[700px]"

@@ -21,17 +21,17 @@ import TitleSection2 from "@/components/common/title-section/title-section2";
 const tab_lists = [
   {
     key: "tab1",
-    name: "Realtime performance",
+    name: "Campaign Performance",
     image: "/assets/imgs/ctwa/icon-r-27.webp",
   },
   {
     key: "tab2",
-    name: "Lead funnel status",
+    name: "Sales Funnel Status",
     image: "/assets/imgs/ctwa/icon-r-28.webp",
   },
   {
     key: "tab3",
-    name: "Lead engagement",
+    name: "Conversation Summary",
     image: "/assets/imgs/ctwa/icon-r-29.webp",
   },
 ];
