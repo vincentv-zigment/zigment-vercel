@@ -1,3 +1,4 @@
+import Newsletter3 from "@/components/common/newsletter";
 import BlogDetailComp from "@/components/sections/marketing/blog/blog-details-comp";
 import { blogData, getMarkdownDataForBlog } from "@/lib/blog/blog-data";
 import { BlogI } from "@/lib/types/blog";
@@ -62,6 +63,10 @@ const BlogDetailsPage = ({ blog_content, blog_data }: Props) => {
         <section className="space-y-20 pt-8 md:pt-20 ">
           <BlogDetailComp blog_content={content} data={data} />
         </section>
+        <Newsletter3 
+          title="Get productivity tips delivered straight to your inbox"
+          description="We'll email you 1-2 times per week—and never share your information."
+        />
       </>
     </>
   );

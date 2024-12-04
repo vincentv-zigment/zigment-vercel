@@ -2,12 +2,11 @@
 import BlogBreadCrumbs from '@/components/blocks/landing-page/marketing/blog/blog-bread-crumbs';
 import CTASectionblog from '@/components/blocks/landing-page/marketing/blog/cta-section-blog';
 import MarkdownToHTML3 from '@/components/common/markdown-to-html3';
-import CTASection from '@/components/common/marketing/landing-page/cta-section';
 import { BlogI } from '@/lib/types/blog';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook } from 'react-icons/fa';
-import { FaLinkedin, FaTwitter } from 'react-icons/fa6';
+import { FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 
 type Props = {
   blog_content: string
@@ -35,7 +34,7 @@ const BlogDetailComp = ({ data, blog_content }: Props) => {
     <>
       <section className='pt-4 md:pt-16 sm:px-20 xl:px-0 lg:max-w-7xl mx-auto'>
         <BlogBreadCrumbs data={data} />
-        <div className=' mx-auto w-full md:max-w-2xl lg:max-w-3xl '>
+        <div className=' mx-auto w-full md:max-w-2xl lg:max-w-3xl pb-10'>
           <div className=' bg-white rounded-md flex w-full flex-col justify-center p-8 md:px-10 md:py-[35px]  mx-auto      items-center 
             [&_img]:md:w-full
             [&_img]:w-full
@@ -61,8 +60,8 @@ const BlogDetailComp = ({ data, blog_content }: Props) => {
               <Link href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`} className='text-gray-400 hover:text-[#1877F2]' target="_blank" rel="noopener noreferrer">
                 <FaFacebook className='w-6 h-6' />
               </Link>
-              <Link href={`https://twitter.com/intent/tweet?url=${blogUrl}`} className='text-gray-400 hover:text-[#1DA1F2]' target="_blank" rel="noopener noreferrer">
-                <FaTwitter className='w-6 h-6' />
+              <Link href={`https://twitter.com/intent/tweet?url=${blogUrl}`} className='text-gray-400 hover:text-black' target="_blank" rel="noopener noreferrer">
+                <FaXTwitter className='w-6 h-6' />
               </Link>
               <Link href={`https://www.linkedin.com/sharing/share-offsite/?url=${blogUrl}`} className='text-gray-400 hover:text-[#0077B5]' target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className='w-6 h-6' />
@@ -71,14 +70,15 @@ const BlogDetailComp = ({ data, blog_content }: Props) => {
 
             <Image src={cover_image} alt='' width={500} height={500} className='w-full h-[400px] object-cover rounded-xl' />
             <MarkdownToHTML3 content={blog_content} />
+
             <CTASectionblog data={data} />
-            <div className='flex items-center justify-center gap-4 pb-4   '>
+            <div className='flex items-center justify-center gap-4 py-4   '>
               <span className='font-semibold'>Share :</span>
               <Link href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`} className='text-gray-400 hover:text-[#1877F2]' target="_blank" rel="noopener noreferrer">
                 <FaFacebook className='w-6 h-6' />
               </Link>
-              <Link href={`https://twitter.com/intent/tweet?url=${blogUrl}`} className='text-gray-400 hover:text-[#1DA1F2]' target="_blank" rel="noopener noreferrer">
-                <FaTwitter className='w-6 h-6' />
+              <Link href={`https://twitter.com/intent/tweet?url=${blogUrl}`} className='text-gray-400 hover:text-black' target="_blank" rel="noopener noreferrer">
+                <FaXTwitter  className='w-6 h-6' />
               </Link>
               <Link href={`https://www.linkedin.com/sharing/share-offsite/?url=${blogUrl}`} className='text-gray-400 hover:text-[#0077B5]' target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className='w-6 h-6' />
@@ -86,8 +86,8 @@ const BlogDetailComp = ({ data, blog_content }: Props) => {
             </div>
           </div>
         </div>
+        
       </section>
-      <CTASection />
     </>
   )
 }

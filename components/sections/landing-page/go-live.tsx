@@ -122,7 +122,7 @@ const ServiceCard2 = ({ service }: ServiceProps) => {
             width={19}
             height={14}
             src="/assets/imgs/icon/arrow.png"
-            className="-rotate-45 rtl:-rotate-135"
+            className=" "
             alt="icon"
           />
         </div>

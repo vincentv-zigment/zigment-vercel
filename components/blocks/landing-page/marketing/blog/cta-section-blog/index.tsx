@@ -1,78 +1,14 @@
 import { BlogI } from "@/lib/types/blog";
-import axios from "axios";
 import Link from "next/link";
-import React, { useState } from "react";
-import { Marketing_Lead_Source } from "@/lib/types/ui";
-import Spinner from "@/components/common/loaders/spinner";
-import { Button } from "@/components/ui/button";
 
 type Props = {
   data: BlogI;
 };
 
 const CTASectionblog = ({ data }: Props) => {
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState<boolean>(false);
-
-  const handleSubmit = async () => {
-    setLoading(true);
-    try {
-      await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/cms/new-lead`,
-        {
-          email: email,
-          is_email_subscription: true,
-          source: Marketing_Lead_Source.EMAIL_SUBSCRIPTION,
-          source_detail: 'BLOG',
-        }
-      );
-      // setIsSubmitted(true)
-    } catch (error) {
-      console.log(error, "error");
-    }
-
-    setLoading(false);
-  };
-
   return (
     <section className=" border-y  border-gray-300 my-4 text-center">
-      <div className="w-full max-w-6xl mx-auto py-6 px-2 md:px-10">
-        <div>
-          <h1 className="text-2xl   font-bold text-gray-900 lg:text-2xl   leading-tight">
-            <div className="relative leading-tight">
-              <p className="block xl:inline ">
-                Get productivity tips delivered straight to your inbox
-              </p>{" "}
-            </div>
-          </h1>
-          <div className=" mt-6     text-center  ">
-            <div className="rounded-md w-full flex flex-col md:flex-row items-center relative gap-4 md:px-10 justify-center lg:justify-center">
-              <input
-                type="text"
-                className="block w-full rounded-[15px] px-4 border border-border    sm:py-3 py-2  shadow-sm focus:border-indigo-500 focus:ring-indigo-500  sm:text-sm"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <Button variant={'primary'} size={'sm'} onClick={handleSubmit}>
-              {loading ? (
-                  <span className="w-full  pl-3   flex items-center justify-center">
-                    <Spinner color="" />
-                  </span>
-                ) : (
-                  "Submit"
-                )}
-              </Button>
-               
-            </div>
-            <div className="mx-auto max-w-7xl  py-4">
-              <h2 className="lg:text-center md:text-lg font-semibold text-center leading-8 text-gray-900">
-                {`We'll email you 1-2 times per week—and never share your
-                information.`}
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
+       
       <div className="text-left border-t border-gray-300 py-6 md:px-5 flex flex-col md:flex-row md:items-center gap-6 text-[15px]">
         <span className="  uppercase w-16 h-16 flex  items-center justify-center text-3xl font-medium rounded-full bg-gray-200 shrink-0">
           {data.author[0]}

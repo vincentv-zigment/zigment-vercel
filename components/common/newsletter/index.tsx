@@ -30,7 +30,16 @@ const formSchema = z.object({
     .email("This is not a valid email."),
 });
 
-const Newsletter3 = () => {
+type Props = {
+  title?:string;
+  description?:string;
+}
+
+const Newsletter3 = ({
+  title = `It’s time for a shapeshifting sales approach.`,
+  description = `Join our mailing list to receive some occasional updates, hacks, advice
+          and generally useful stuff from us.`
+}:Props) => {
   const [loading, setLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false); // Add this line
   const form = useForm<z.infer<typeof formSchema>>({
@@ -90,12 +99,11 @@ const Newsletter3 = () => {
       <div className="container" ref={containerRef}>
         <div className="max-w-[618px] mx-auto text-center mb-[55px]">
           <Title1
-            text="It’s time for a shapeshifting sales approach."
+            text={title}
             className="pb-[15px] md:pb-[24px] has_fade_anim"
           />
           <p className="text-primary has_fade_anim">
-          Join our mailing list to receive some occasional updates, hacks, advice
-          and generally useful stuff from us.
+          {description}
           </p>
         </div>
         <div className="max-w-[910px] mx-auto has_fade_anim">
