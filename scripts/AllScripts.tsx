@@ -1,15 +1,15 @@
-import FacebookScript from './FacebookScript';
-import GoogleAnalytics from './GoogleAnalyticsScript';
-import PosthogScript from './PostHogs';
+import MicrosoftClarity from "./Clarity";
+import FacebookScript from "./FacebookScript";
+import GoogleAnalytics from "./GoogleAnalyticsScript";
 
 const AllScripts = () => {
-
-
-    return <>
-        <GoogleAnalytics />
-        <PosthogScript />
-        <FacebookScript />
-    </>;
+  return (
+    <>
+      <GoogleAnalytics />
+      <MicrosoftClarity />
+      <FacebookScript />
+    </>
+  );
 };
 
 export default AllScripts;

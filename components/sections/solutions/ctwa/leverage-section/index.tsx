@@ -15,17 +15,17 @@ const LeverageSection = () => {
     {
       name: "Zero Flows Required",
       details: "We just train the AI agents with your business data and set the objective you desire. No pre-scripting. Its magic!",
-      icon: "/assets/imgs/ctwa/icon-r-18.webp"
+      icon: "/assets/imgs/ctwa/leverage-section/icon-r-18.png"
     },
     {
       name: "Go Live in 3-5 days",
       details: "Your campaigns go live in days (and not months) with almost zero effort from your side. We do it for you!",
-      icon: "/assets/imgs/ctwa/icon-r-19.webp"
+      icon: "/assets/imgs/ctwa/leverage-section/icon-r-19.png"
     },
     {
       name: "Meta Tech Partner",
       details: "Zigment enables an easy WABA integration and funnel data passback to optimize your campaigns",
-      icon: "/assets/imgs/ctwa/icon-r-18.webp"
+      icon: "/assets/imgs/ctwa/leverage-section/icon-r-20.png"
     }
   ];
 
@@ -39,7 +39,7 @@ const LeverageSection = () => {
   );
 
   return (
-    <section className="sec_space_bottom4">
+    <section className="sec_space1">
       <div className="container" ref={containerRef}>
         <div className="grid grid-cols-1 lg:grid-cols-11 gap-y-[60px] justify-between has_fade_anim">
           <div className="col-span-1 lg:col-span-6 order-2 lg:order-1 ">

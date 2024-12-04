@@ -81,6 +81,14 @@ const Counter = ( ) => {
               text={`1-1 Conversations at scale`}
               className="pb-[15px] md:pb-[24px] has_fade_anim"
             />
+            <div className="space-y-4 md:hidden pt-[30px]   w-full has_fade_anim">
+                <p className="  ">
+                {`Zigment engages each customer individually, giving full attention to their specific needs.`}
+                </p>
+                <p className="">
+                {`This continuous, hyper-personalized approach ensures conversions, deepen relationships, and sustainable growth.`}
+                </p>
+            </div>
               <div className="bg-[#F6F0DF] relative rounded-[40px] max-w-full lg:max-w-[430px] xl:max-w-[530px] 2xl:max-w-[630px] ms-[unset] lg:ms-auto ps-[54px] pe-[45px] pt-[50px] md:hidden my-10">
               <div className="hidden md:block absolute start-10 lg:-start-[20px] xl:-start-[50px] 2xl:-start-[90px] -top-20 md:top-[20%] lg:top-[10%] w-full lg:w-[200px] 2xl:w-[256px] drop-shadow-lg  z-20">
                   <Image
@@ -92,6 +100,7 @@ const Counter = ( ) => {
                     alt="shape"
                   />
               </div>
+              
               <div className="hidden md:block absolute bottom-[20px] lg:bottom-[80px] -start-[20px] lg:-start-[80px] z-[2] drop-shadow-3 w-full lg:w-[300px] 2xl:w-[386px]">
                   <Image
                     width={386}
@@ -102,11 +111,12 @@ const Counter = ( ) => {
                     alt="shape"
                   />
               </div>
+              
               <div className="relative flex justify-center md:justify-end md:-right-8">
                   <Image width={1000} height={1000} className="w-[300px] h-auto object-contain"  src={'/assets/imgs/counter/edhfjk.png'} alt="shape" />
               </div>
             </div>
-            <div className="space-y-4 pb-[30px] md:pb-[55px] w-full has_fade_anim">
+            <div className="hidden md:block space-y-4  pb-[30px] md:pb-[55px] w-full has_fade_anim">
                 <p className="  ">
                 {`Zigment engages each customer individually, giving full attention to their specific needs.`}
                 </p>
