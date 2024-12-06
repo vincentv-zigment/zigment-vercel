@@ -120,7 +120,9 @@ const CTWAHero = () => {
                   >
                     <FaPlay />
                   </div>
-                  <p className="text-[16px] font-bold text-primary">
+                  <p                     onClick={() => {
+                      setOpenModal(true);
+                    }} className="text-[16px] font-bold text-primary">
                     Watch Demo
                   </p>
                 </div>
