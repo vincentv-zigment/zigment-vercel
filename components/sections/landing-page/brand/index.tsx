@@ -41,8 +41,8 @@ const Brand = () => {
   const memoizedCn = useMemo(() => cn("text-center mb-[40px] has_fade_anim", ``), []);
 
   return (
-    <div className={"sec_space1"}>
-      <div className="container" ref={containerRef}>
+    <div className={"sec_space_bottom1 md:sec_space1"}>
+      <div className="" ref={containerRef}>
         <p className={memoizedCn}>
           {`Zigment, trusted by some of the best companies`}
         </p>

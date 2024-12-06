@@ -58,8 +58,8 @@ const WhatsappAIAgent = () => {
   );
 
   return (
-    <section className=" max-w-7xl mx-auto rounded-theme sec_space1">
-      <div className="container bg-sec_bg p-10 md:p-20 rounded-3xl" ref={containerRef}>
+    <section className=" max-w-7xl mx-auto rounded-theme ">
+      <div className="container bg-sec_bg p-10 md:p-20 rounded-3xl sec_space1" ref={containerRef}>
         <TitleSection2
           title={`Zigment is the next generation of Whatsapp AI chat agents `}
           details={`Zigment brings the truly next-gen AI power to your CTWA campaigns`}

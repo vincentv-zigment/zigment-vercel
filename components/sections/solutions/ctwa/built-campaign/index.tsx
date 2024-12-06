@@ -50,7 +50,7 @@ const BuiltCampaign = () => {
   );
 
   return (
-    <section className="sec_space1">
+    <section className="sec_space_bottom1 md:sec_space1">
       <div className="container" ref={containerRef}>
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[auto_660px] gap-[30px] md:gap-[50px] 2xl:gap-[195px]">
           <div>

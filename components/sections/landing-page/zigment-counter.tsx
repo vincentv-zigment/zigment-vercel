@@ -46,7 +46,7 @@ const Counter = ( ) => {
   );
 
   return (
-    <section className="sec_space1">
+    <section className="sec_space1 bg-sec_bg">
       <div className="container" ref={containerRef}>
         <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-[20px]">
           <div className="col-md-5 col-lg-7 order-1 lg:order-2">
@@ -89,7 +89,7 @@ const Counter = ( ) => {
                 {`This continuous, hyper-personalized approach ensures conversions, deepen relationships, and sustainable growth.`}
                 </p>
             </div>
-              <div className="bg-[#F6F0DF] relative rounded-[40px] max-w-full lg:max-w-[430px] xl:max-w-[530px] 2xl:max-w-[630px] ms-[unset] lg:ms-auto ps-[54px] pe-[45px] pt-[50px] md:hidden my-10">
+              <div className="bg-[#F6F0DF] relative rounded-[40px] max-w-full lg:max-w-[430px] xl:max-w-[530px] 2xl:max-w-[630px] ms-[unset] lg:ms-auto ps-[54px] pe-[45px] py-10 md:pt-[50px] md:hidden my-10">
               <div className="hidden md:block absolute start-10 lg:-start-[20px] xl:-start-[50px] 2xl:-start-[90px] -top-20 md:top-[20%] lg:top-[10%] w-full lg:w-[200px] 2xl:w-[256px] drop-shadow-lg  z-20">
                   <Image
                     width={300}
@@ -112,7 +112,7 @@ const Counter = ( ) => {
                   />
               </div>
               
-              <div className="relative flex justify-center md:justify-end md:-right-8">
+              <div className="relative flex  justify-center md:justify-end md:-right-8">
                   <Image width={1000} height={1000} className="w-[300px] h-auto object-contain"  src={'/assets/imgs/counter/edhfjk.png'} alt="shape" />
               </div>
             </div>
@@ -134,7 +134,7 @@ const Counter = ( ) => {
                     <div className="flex items-center gap-4">
                       <IoIosCheckmarkCircle className="w-8 h-8 object-contain text-primary" />
                       
-                      <h3 className="text-[12px] lg:text-[16px] xl:text-[20px] leading-none">
+                      <h3 className="text-[16px] xl:text-[20px] leading-none">
                         {item}
                       </h3>
                     </div>

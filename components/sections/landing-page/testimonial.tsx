@@ -74,7 +74,7 @@ const Testimonial = () => {
             watchSlides: true,
             loop: true,
           }}
-          className="w-full max-w-6xl mt-20 mx-auto px-2 md:px-8"
+          className="w-full max-w-6xl mt-10 md:mt-20 mx-auto px-2 md:px-8"
         >
           <CarouselContent>
             {items.map((item, index) => (

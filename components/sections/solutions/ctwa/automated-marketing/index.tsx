@@ -71,7 +71,7 @@ const AutomatedMarketing = () => {
   );
 
   return (
-    <section className="sec_space1">
+    <section className="sec_space_bottom1 md:sec_space1">
       <div className="container" ref={containerRef} dir="ltr">
         <TitleSection2
           title={`Be in control of your campaigns all the time`}

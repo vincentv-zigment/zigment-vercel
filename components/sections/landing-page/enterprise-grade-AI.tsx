@@ -10,7 +10,6 @@ import { useGSAP } from "@gsap/react";
 
 // components
 import Title1 from "@/components/common/title/title1";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
  
@@ -65,7 +64,7 @@ const EnterpriseGradeAI = ( ) => {
   );
 
   return (
-    <section className="sec_space1">
+    <section className="sec_space_bottom1 md:sec_space1">
       <div className="container" ref={containerRef}>
         <Title1
           text={`Enterprise grade AI`}
@@ -104,8 +103,16 @@ const EnterpriseGradeAI = ( ) => {
             ))}
           </div>
           <div className="w-full flex items-center justify-between mt-4">
-            <Button onClick={handlePrev}><BsArrowLeft className="w-6 h-6"/></Button>
-            <Button onClick={handleNext}><BsArrowRight  className="w-6 h-6"/></Button>
+            <button 
+              className="w-[60px] h-[60px] flex items-center justify-center border border-border rounded-theme focus:bg-primary group"
+              onClick={handlePrev}>
+                <BsArrowLeft className="w-6 h-6 group-focus:text-white"/>
+            </button>
+            <button 
+              className="w-[60px] h-[60px] flex items-center justify-center border border-border rounded-theme focus:bg-primary group" 
+              onClick={handleNext}>
+                <BsArrowRight  className="w-6 h-6 group-focus:text-white"/>
+            </button>
           </div>
         </div>
         <div
