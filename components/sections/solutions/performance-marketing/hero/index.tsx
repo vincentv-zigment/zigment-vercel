@@ -40,8 +40,12 @@ const PerformanceHero = () => {
         <div className="container" ref={containerRef}>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-12 gap-y-[25px] md:gap-y-[50px]">
             <div className="col-span-1 xl:col-span-5">
-              <h1 className="pb-[20px] md:pb-[30px] text-[35px] md:text-[50px] xl:text-[56px] !leading-[0.9] has_fade_anim text-center md:text-left">
-              Agentic AI Platform Built For Performance Marketing
+              <h1 className="pb-[20px] md:pb-[30px] text-[35px] md:text-[40px] xl:text-[48px] !leading-[0.9] has_fade_anim text-center md:text-left">
+              Agentic AI Platform 
+              <span className="block">
+                Built For Performance 
+              </span>
+              Marketing
 
 
               </h1>

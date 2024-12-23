@@ -13,6 +13,7 @@ import SixCards from '@/components/sections/solutions/common/six-cards';
 import TabsSection, { tabContentI } from '@/components/sections/solutions/common/tabs-section';
 import Counter from '@/components/sections/solutions/common/zigment-counter';
 import BlogSection from '@/components/sections/solutions/ctwa/blog-section';
+import PerformanceCounter from '@/components/sections/solutions/performance-marketing/counter';
 import PerformanceHero from '@/components/sections/solutions/performance-marketing/hero'
 import { blogData } from '@/lib/blog/blog-data';
 import { BlogI } from '@/lib/types/blog';
@@ -22,18 +23,18 @@ const chatbot_features:chatbotfeatureI[] = [
     {
       title: "Meta Ad Campaigns",
       description: "AI agents that instantly engage every lead and qualify",
-      image:'/assets/imgs/ctwa/chatbot-feature/poor-roi.png'
+      image:'/assets/imgs/solutions/meta-campaigns.png'
     },
     {
       title: "Click-to-whatsapp",
       description: "Go live with CTWA campaigns in less than two days!",
-      image:'/assets/imgs/ctwa/chatbot-feature/high-dropoffs2.png'
+      image:'/assets/imgs/solutions/ctwa.png'
   
     },
     {
       title: "Google Ads",
       description: "AI agents that help you focus only on the qualified leads",
-      image:'/assets/imgs/ctwa/chatbot-feature/poor-lead-quality.png'
+      image:'/assets/imgs/solutions/google-ads.png'
   
     }
   ];
@@ -198,11 +199,12 @@ const PerformanceMarketing = ({data}:Props) => {
             details='Not meaningfully engaging your leads immediately after they show interest results in lost leads'
             items={leverage_section_items}
         />
-        <Counter 
+        <PerformanceCounter 
             title='Focus only on the leads that count'
             details1='Cut tele-calling hours by up to 90%, lowering your team’s costs while maintaining high engagement levels. '
             details2='Focusing on the most qualified leads means that your best sales executives are working on the highest ROI prospects'
             items={benefits}
+            image3='/assets/imgs/lead-gen/circle_ain 1.gif'
         />
         <Brand/>
         <SixCards
