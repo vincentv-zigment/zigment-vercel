@@ -192,7 +192,7 @@ const PerformanceMarketing = ({data}:Props) => {
             details={<>{`AI agents integrated with your Ad campaigns start engaging with your  `} <br></br> <span className="block">leads as soon as they enter the funnel</span></>} 
             items={chatbot_features}
         />
-        <LeadConversion/>
+        {/* <LeadConversion/> */}
         <LeverageSection 
             title='Leverage the true power of AI Agents' 
             details='Not meaningfully engaging your leads immediately after they show interest results in lost leads'
