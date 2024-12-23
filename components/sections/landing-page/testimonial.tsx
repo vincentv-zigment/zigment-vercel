@@ -78,9 +78,9 @@ const Testimonial = () => {
         >
           <CarouselContent>
             {items.map((item, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
                 <div className="p-1">
-                  <Card className="rounded-2xl h-[320px] ">
+                  <Card className="rounded-2xl h-[320px] bg-white">
                     <CardContent className="  p-10">
                       <div className="">
                         <Image

@@ -16,6 +16,7 @@ export interface IntegrationDataI {
   logo_url: string;
   app_description: string;
   category: string;
+  
 }
 
 export async function getServerSideProps() {

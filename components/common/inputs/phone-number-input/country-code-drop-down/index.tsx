@@ -122,7 +122,6 @@ const CountryCodeDropdown = ({
                 : "ring-transparent  "
             } cursor-pointer  ${className}   
             `}
-            style={{ width: "100px" }} 
             value={`${selected.isoCode} ${selected.phonecode}`}
             readOnly
           ></input>

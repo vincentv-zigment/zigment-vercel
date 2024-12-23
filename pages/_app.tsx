@@ -33,7 +33,13 @@ const queryClient = new QueryClient({
 declare global {
   interface Window {
     dataLayer: Array<Record<string, unknown>>;
-    gtag: (command: string, id: string, config?: Record<string, unknown>) => void;
+    gtag: (
+      command: string,
+      id: string,
+      config?: Record<string, unknown>
+    ) => void;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    fbq: (...any: any) => void;
   }
 }
 
@@ -46,11 +52,12 @@ const trackPageView = (url: string, title: string) => {
       ...(title && { page_title: title }),
     });
   }
+  if (window && window.fbq) {
+    window.fbq("track", "PageView");
+  }
 };
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
-   
 
   useEffect(() => {
     // Track initial page load
@@ -86,7 +93,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <LandingPageLayout>
               <Component {...pageProps} />
             </LandingPageLayout>
-              
           </ErrorBoundary>
           <ToastContainer />
         </ToastProvider>

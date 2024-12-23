@@ -280,7 +280,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="bg-white text-center text-black py-4">
-        <p className="text-brand-blue-200 font-poppins font-medium text-sm">
+        <p className="text-brand-blue-200 text-center md:text-left font-poppins font-medium text-sm">
           © Copyright 2024, All Rights Reserved | Zigment.ai
         </p>
       </div>

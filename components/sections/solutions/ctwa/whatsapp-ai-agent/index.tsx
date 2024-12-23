@@ -66,7 +66,7 @@ const WhatsappAIAgent = () => {
           titleClassName="max-w-6xl"
           detailsClassName="max-w-[695px]"
         />
-          <div className="mt-[20px] md:mt-[40px] lg:mt-[70px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[10px] lg:gap-[30px] mx-[20px] xl:mx-[70px] justify-center">
+          <div className="mt-[20px] md:mt-[40px] lg:mt-[70px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[10px] lg:gap-[30px] mx-[20px]cursor-pointer  xl:mx-[70px] justify-center">
             {features.map((item, i) => (
               <div
                 key={`feature_item-${i}`}

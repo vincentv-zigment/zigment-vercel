@@ -1,3 +1,4 @@
+import { useIsMobile } from "@/hooks/useIsMobile";
 import React from "react";
 import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -14,6 +15,7 @@ export default function CommonPopover({ children, Trigger, className, }: Props) 
   const divRef = useRef<HTMLDivElement>(null);
   const popoverRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState<CSSProperties>({});
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (show && divRef.current && popoverRef.current) {
@@ -30,11 +32,12 @@ export default function CommonPopover({ children, Trigger, className, }: Props) 
       }; 
 
       // Adjust if popover goes beyond the right edge of the viewport
-      if (divRect.left + popoverRect.width > windowWidth) {
+      if (divRect.left + popoverRect.width > windowWidth && !isMobile) {
         newPosition.right = windowWidth - scrollLeft - divRect.right ; // 10px padding from the edge
       }
 
-      if(divRect.left + popoverRect.width < windowWidth){
+      if((divRect.left + popoverRect.width < windowWidth) && !isMobile){
+
         newPosition.left = divRect.left + scrollLeft;
       }
 

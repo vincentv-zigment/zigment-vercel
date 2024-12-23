@@ -97,7 +97,7 @@ const CTWAHero = () => {
                 className="pb-[20px] md:pb-[40px] has_fade_anim md:hidden"
                 data-delay="0.30"
               >
-                {`Drive your CTWA campaigns to success with 
+                {`Drive your Whatsapp campaigns to success with 
   Zigment’s Sales trained AI agents
   `}
               </p>
@@ -120,9 +120,9 @@ const CTWAHero = () => {
                   >
                     <FaPlay />
                   </div>
-                  <p                     onClick={() => {
+                  <p className="text-[16px] font-bold text-primary"                     onClick={() => {
                       setOpenModal(true);
-                    }} className="text-[16px] font-bold text-primary">
+                    }}>
                     Watch Demo
                   </p>
                 </div>

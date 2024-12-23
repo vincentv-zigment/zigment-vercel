@@ -22,7 +22,13 @@ type FormDataI = {
   description: string;
 };
 
-export default function JoinUsComp({title='AI is disrupting "every" industry. Let us get ahead of the curve, together!', title2='It all starts here!'}:{title?:string; title2?:string}) {
+export default function JoinUsComp({
+  title = 'AI is disrupting "every" industry. Let us get ahead of the curve, together!',
+  title2 = "It all starts here!",
+}: {
+  title?: string;
+  title2?: string;
+}) {
   const [formData, setFormData] = useState<FormDataI>({
     name: "",
     email: "",
@@ -105,13 +111,15 @@ export default function JoinUsComp({title='AI is disrupting "every" industry. Le
     if (handleValidation()) {
       // Your form submission logic
       try {
-        await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/cms/new-candidate`,
+        await axios.post(
+          `${process.env.NEXT_PUBLIC_API_URL}/cms/new-candidate`,
           {
             name: formData.name,
             email: formData.email,
             skill_set: formData.skillset,
-            tell_us_about_yourself: formData.description
-          })
+            tell_us_about_yourself: formData.description,
+          }
+        );
         setLoading(false);
         setIsSubmitted(true);
       } catch {
@@ -123,147 +131,138 @@ export default function JoinUsComp({title='AI is disrupting "every" industry. Le
   };
 
   return (
-        <div className="flex flex-col lg:flex-row">
-          <div className=" flex flex-col relative justify-end  bg-gray-100 w-full  ">
-            <div className="text-xl md:text-3xl text-center md:mt-10 absolute inset-x-0 mx-auto   top-10">
-              <p className="max-w-xl w-full mx-auto">{title}</p>
-            </div>
-            <div className="relative">
-              <div className="flex items-center absolute bottom-0">
-                <Image src={person1} className="w-6/12 left-0" alt="" />
-                <Image src={person2} className="w-4/12" alt="" />
-              </div>
-              <Image
-                src={bgimage}
-                alt=""
-                className="w-full px-10 "
-                width={200}
-              />
+    <div className="flex flex-col lg:flex-row">
+      <div className=" flex flex-col relative justify-end  bg-gray-100 w-full  ">
+        <div className="text-xl md:text-3xl text-center md:mt-10 absolute inset-x-0 mx-auto   top-10">
+          <p className="max-w-xl w-full mx-auto">{title}</p>
+        </div>
+        <div className="relative">
+          <div className="flex items-center absolute bottom-0">
+            <Image src={person1} className="w-6/12 left-0" alt="" />
+            <Image src={person2} className="w-4/12" alt="" />
+          </div>
+          <Image src={bgimage} alt="" className="w-full px-10 " width={200} />
+        </div>
+      </div>
+      <div className="  w-full px-6   py-16">
+        {isSubmitted ? (
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-green-500 text-xl font-semibold mb-2">
+                Thank you for submitting the form!
+              </p>
+              <p className="text-gray-700">
+                We will get back to you as soon as possible.
+              </p>
             </div>
           </div>
-          <div className="  w-full px-6   py-16">
-
-            {isSubmitted ?
-
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-green-500 text-xl font-semibold mb-2">
-                    Thank you for submitting the form!
-                  </p>
-                  <p className="text-gray-700">
-                    We will get back to you as soon as possible.
-                  </p>
-                </div>
-              </div>
-              :
-              <>
-                {/* Form Component */}
-                <form
-                  action=""
-                  className="
+        ) : (
+          <>
+            {/* Form Component */}
+            <form
+              action=""
+              className="
                             w-full max-w-lg mx-auto
                             "
-                >
-                  <h3 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
-                    {title2}
-                  </h3>
-                  <div
-                    className="
+            >
+              <h3 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
+                {title2}
+              </h3>
+              <div
+                className="
                             space-y-6"
+              >
+                <div>
+                  <label
+                    htmlFor="name"
+                    className={errors.name ? "text-red-500" : "text-gray-400"}
                   >
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className={errors.name ? "text-red-500" : "text-gray-400"}
-                      >
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className={inputStyle}
-                        placeholder="Enter your name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                      />
-                    </div>
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className={inputStyle}
+                    placeholder="Enter your name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                </div>
 
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className={errors.email ? "text-red-500" : "text-gray-400"}
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        className={inputStyle}
-                        value={formData.name}
-                        onChange={handleInputChange}
-                      />
-                    </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className={errors.email ? "text-red-500" : "text-gray-400"}
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    className={inputStyle}
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                </div>
 
-                    <div>
-                      <label
-                        htmlFor="skillset"
-                        className={
-                          errors.skillset ? "text-red-500" : "text-gray-400"
-                        }
-                      >
-                        Skillset
-                      </label>
-                      <input
-                        type="text"
-                        id="skillset"
-                        placeholder="Enter your skills..."
-                        className={inputStyle}
-                        value={formData.name}
-                        onChange={handleInputChange}
-                      />
-                    </div>
+                <div>
+                  <label
+                    htmlFor="skillset"
+                    className={
+                      errors.skillset ? "text-red-500" : "text-gray-400"
+                    }
+                  >
+                    Skillset
+                  </label>
+                  <input
+                    type="text"
+                    id="skillset"
+                    placeholder="Enter your skills..."
+                    className={inputStyle}
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                </div>
 
-                    <div>
-                      <label
-                        htmlFor="description"
-                        className={
-                          errors.description ? "text-red-500" : "text-gray-400"
-                        }
-                      >
-                        Tell Us about yourself
-                      </label>
-                      <input
-                        type="text"
-                        id="description"
-                        placeholder="Tell Us about yourself..."
-                        className={inputStyle}
-                        style={{ outline: "none" }}
-                        value={formData.name}
-                        onChange={handleInputChange}
-                      />
-                    </div>
+                <div>
+                  <label
+                    htmlFor="description"
+                    className={
+                      errors.description ? "text-red-500" : "text-gray-400"
+                    }
+                  >
+                    Tell Us about yourself
+                  </label>
+                  <input
+                    type="text"
+                    id="description"
+                    placeholder="Tell Us about yourself..."
+                    className={inputStyle}
+                    style={{ outline: "none" }}
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
+              <button
+                id="submit-btn"
+                onClick={handleSubmit}
+                className="my-10 block text-center px-10 border transition-all hover:bg-brand-orange-main border-brand-orange-main w-full py-3 rounded-md hover:text-white text-lg text-brand-orange-main font-bold"
+              >
+                {loading ? (
+                  <div className="w-full flex items-center justify-center h-[28px]">
+                    <Spinner color="white" />
                   </div>
-
-                  <button
-                    onClick={handleSubmit}
-                    className="my-10 block text-center px-10 border transition-all hover:bg-brand-orange-main border-brand-orange-main w-full py-3 rounded-md hover:text-white text-lg text-brand-orange-main font-bold "
-                  >
-                    {loading ? (
-                      <div className="w-full flex items-center justify-center h-[28px]">
-                        <Spinner color="white" />
-                      </div>
-                    ) : (
-                      "Submit"
-                    )}
-                  </button>
-                </form>
-              </>
-            }
-
-
-
-          </div>
-        </div>
+                ) : (
+                  "Submit"
+                )}
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
   );
 }

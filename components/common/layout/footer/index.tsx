@@ -103,7 +103,7 @@ const Footer = () => {
               ))}
             </ul>
           )}
-          <p className="text-[16px] font-bold text-white-2">
+          <p className="text-[16px] font-bold text-white-2 text-center md:text-left">
             © Copyright 2024, All Rights Reserved | Zigment.ai
           </p>
         </div>

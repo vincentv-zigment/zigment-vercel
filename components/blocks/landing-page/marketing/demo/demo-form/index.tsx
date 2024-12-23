@@ -197,6 +197,7 @@ const DemoForm = ({
                   className={`${inputStyle} `}
                   placeholder="9999-999999 (Optional)"
                   initphoneCodeValue="US"
+                  countryCodeClassName={`${inputStyle}`}
                 />
               </div>
             </div>

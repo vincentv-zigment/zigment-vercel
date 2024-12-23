@@ -35,7 +35,7 @@ const Header = () => {
     }
   };
 
-  if (router.pathname.startsWith("/lp")) {
+  if ( ["/lp/ivf",].includes(router.pathname)) {
     return null;
   }
 
@@ -50,7 +50,7 @@ const Header = () => {
         <div className="container">
           <div
             className={cn(
-              "relative flex gap-[20px] justify-between items-center h-[60px] md:h-[70px] max-w-[950px] rounded-full my-[20px] mx-auto px-[30px] py-[10px] 2xl:pe-[10px]",
+              "relative flex gap-[20px] justify-between items-center h-[60px] md:h-[70px] max-w-[1000px] rounded-full my-[20px] mx-auto px-[30px] py-[10px] 2xl:pe-[10px]",
               scroll ? "bg-white-3" : "bg-[#FFFFFFD1]"
             )}
           >
@@ -69,6 +69,21 @@ const Header = () => {
               <Menu headerNav={headerNav} />
             </div>
             <div className=" flex justify-end gap-4">
+              {router.pathname === "/lp/lead-gen" ? 
+                <>
+                   
+              <Link
+                href={'/contact-us'}
+                className={cn(buttonVariants({ variant: "primary2", size: "sm" ,className:'hidden lg:inline-block'}))}
+                id="contact-us"
+              >
+                <span className="btn-span" data-text="Get in Touch">
+                  Get in Touch
+                </span>
+              </Link>
+                </> 
+                : 
+                <>
             <Link
                 href={'/demo'}
                 className={cn(buttonVariants({ variant: "primary2", size: "sm" ,className:'lg:hidden'}))}
@@ -85,6 +100,8 @@ const Header = () => {
                   Demos
                 </span>
               </Link>
+                </> 
+              }
               <div className="flex justify-end xl:hidden">
                 <Offcanvas headerNav={headerNav} />
               </div>

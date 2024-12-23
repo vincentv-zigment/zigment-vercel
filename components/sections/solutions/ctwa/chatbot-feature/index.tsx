@@ -53,7 +53,7 @@ const ChatbotFeature = () => {
           title={`Existing chatbots are anything but AI 
 and hardly affective
 `}
-          details={<>{`Your CTWA campaigns aren’t successful because your current`} <br></br> solutions are stuck in the past</>}
+          details={<>{`Your CTWA campaigns aren’t successful because `} <br></br> <span className="block">your current solutions are stuck in the past</span></>}
           titleClassName="max-w-6xl"
           detailsClassName="max-w-[700px]"
         />

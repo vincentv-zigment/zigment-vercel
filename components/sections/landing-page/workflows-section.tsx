@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 
 // gsap
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
@@ -13,7 +13,13 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 
-const services = [
+export type workflow_features_type = {
+  title: string;
+  sub_title: string;
+  image: string;
+}
+
+const services:workflow_features_type[] = [
   {
     title: "End-user Experience",
     sub_title:
@@ -39,7 +45,18 @@ const services = [
     image: "/path/to/human-supervision-image.jpg",
   },
 ];
-const WorkflowsSection = () => {
+
+type Props = {
+  features?: workflow_features_type[];
+  title?: ReactNode;
+  details?:ReactNode
+}
+const WorkflowsSection = ({
+  features = services,
+  title = 'AI platform built for  custom(er) workflows',
+  details = <>{`Every business operates differently! Zigment platform is built with customization in mind. This is `}
+                <strong>Service as a Software!</strong>{" "}</>
+}:Props) => {
   const containerRef = useRef<HTMLDivElement>(null!);
 
   useGSAP(
@@ -55,12 +72,11 @@ const WorkflowsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[auto_660px] gap-[30px] md:gap-[50px] 2xl:gap-[195px]">
           <div>
             <div className="mb-[25px] md:mb-[51px]">
-              <h2 className="sec_title2 has_fade_anim">{`AI platform built for  custom(er) workflows `}</h2>
+              <h2 className="sec_title2 has_fade_anim">{title}</h2>
             </div>
             <div className="max-w-[520px]">
               <p className="has_fade_anim">
-                {`Every business operates differently! Zigment platform is built with customization in mind. This is `}
-                <strong>Service as a Software!</strong>{" "}
+                {details}
               </p>
             </div>
             <div className="relative max-w-full lg:max-w-[630px] rounded-[40px] mx-auto bg-[#FAFAFA] mt-[50px] md:mt-0 p-0 md:px-[50px] md:py-[60px] block md:hidden">
@@ -113,7 +129,7 @@ const WorkflowsSection = () => {
                 className="w-full mt-[43px] border-t border-border has_fade_anim"
                 defaultValue="item-1"
               >
-                {services.map((item, i) => (
+                {features.map((item, i) => (
                   <AccordionItem
                     key={`accordion_item-${i}`}
                     value={`item-${i + 1}`}

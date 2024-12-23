@@ -1,4 +1,5 @@
 import MetaTagsComponents from "@/components/common/meta-tags-components";
+import Newsletter3 from "@/components/common/newsletter";
 import Brand from "@/components/sections/landing-page/brand";
 import EnterpriseGradeAI from "@/components/sections/landing-page/enterprise-grade-AI";
 import GoLive from "@/components/sections/landing-page/go-live";
@@ -61,7 +62,10 @@ export default function Home({data}:Props) {
         <BuiltCampaign/>
         <Integration2/>
         <GoLive/>
-        <BlogSection data={data.blogs} />
+        <Newsletter3/>
+        {data && data.blogs.length > 0 &&
+          <BlogSection data={data.blogs} />
+        }
       </main>
     </>
   );

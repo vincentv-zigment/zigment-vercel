@@ -1,18 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 // gsap
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import { useGSAP } from "@gsap/react";
 
 // shadcn components
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 // components
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import VideoModal from "@/components/tools/video-modal";
 
 const contentArray = [
   {
@@ -34,7 +35,7 @@ const contentArray = [
 
 const ZigmentHero = () => {
   const containerRef = useRef<HTMLDivElement>(null!);
-
+  const [openModal, setOpenModal] = useState(false);
   useGSAP(
     () => {
       hasFadeAnim();
@@ -103,12 +104,14 @@ channels.`}
                 Talk to us
               </Link>
 
-              <Link
-                href={"/demo"}
-                className={cn(buttonVariants({ variant: "outline2" }))}
+              <Button
+                onClick={()=>{
+                  setOpenModal(true);
+                }}
+                variant="outline2"
               >
-                Try demo
-              </Link>
+                Watch Demo
+              </Button>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px] xl:gap-[30px]">
@@ -154,6 +157,8 @@ channels.`}
           </div>
         </div>
       </section>
+      <VideoModal isOpen={openModal} close={()=>setOpenModal(false)} link="https://cdn.zigment.ai/assets/Zigment-ai-chat-v8.mp4"/>
+      
     </>
   );
 };

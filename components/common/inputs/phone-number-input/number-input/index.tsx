@@ -11,6 +11,7 @@ type PropsI = {
   className?: string
   placeholder?: string;
   initphoneCodeValue?:string
+  countryCodeClassName?:string
 };
 
 export default function PhoneNumberInput({
@@ -20,7 +21,8 @@ export default function PhoneNumberInput({
   setPhoneCode,
   className = 'block w-full rounded-md border-gray-300  px-2 py-2 focus:border-brand-orange-main focus:ring-brand-orange-main sm:text-sm text-left ring-2',
   placeholder = "9999-999999",
-  initphoneCodeValue = "IN"
+  initphoneCodeValue = "IN",
+  countryCodeClassName = "w-20"
 }: PropsI) {
   const [selected, setSelected] = useState<ICountry>(
     Country.getCountryByCode(initphoneCodeValue) ?? Country.getAllCountries()[0]
@@ -68,7 +70,7 @@ export default function PhoneNumberInput({
         
       `}>
         <CountryCodeDropdown
-          className={className}
+          className={countryCodeClassName}
           initphoneCodeValue={initphoneCodeValue}
           setPhoneCode={setPhoneCode}
           formValidation={formValidation}
