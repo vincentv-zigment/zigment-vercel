@@ -51,7 +51,7 @@ const ZigmentHero = () => {
             <div className="max-w-3xl pb-[22px] mx-auto">
               <h2 className="text-[16px]   md:text-[36px] has_fade_anim" >
                 <span className="text-gray-600 lg:text-black text-[16px]   md:text-[28px]">
-                  {`The AI-Native Agentic Sales Platform`}
+                  {`Welcome To Modern Selling`}
                 </span>
               </h2>
             </div>
