@@ -39,7 +39,7 @@ const LeverageSection = ({
   );
 
   return (
-    <section className="sec_space_bottom1 md:sec_space1">
+    <section className="sec_space1">
       <div className="container" ref={containerRef}>
         <div className="grid grid-cols-1 lg:grid-cols-11 gap-y-[60px] justify-between has_fade_anim">
           <div className="col-span-1 lg:col-span-6 order-2 lg:order-1 hidden md:flex items-center justify-center ">

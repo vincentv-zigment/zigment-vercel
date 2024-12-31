@@ -4,12 +4,12 @@ import EnterpriseGradeAI from '@/components/sections/landing-page/enterprise-gra
 import GoLive from '@/components/sections/landing-page/go-live';
 import Integration2 from '@/components/sections/landing-page/integration2';
 import RealBusiness from '@/components/sections/landing-page/real-buisness';
-import Testimonial from '@/components/sections/landing-page/testimonial';
 import WorkflowsSection, { workflow_features_type } from '@/components/sections/landing-page/workflows-section';
 import ChatbotFeature, { chatbotfeatureI } from '@/components/sections/solutions/common/chatbot-feature';
 import LeverageSection from '@/components/sections/solutions/common/leverage-section';
 import SixCards from '@/components/sections/solutions/common/six-cards';
 import TabsSection, { tabContentI } from '@/components/sections/solutions/common/tabs-section';
+import Testimonial2 from '@/components/sections/solutions/common/testimonial';
 import Counter from '@/components/sections/solutions/common/zigment-counter';
 import BlogSection from '@/components/sections/solutions/ctwa/blog-section';
 import PerformanceCounter from '@/components/sections/solutions/performance-marketing/counter';
@@ -212,7 +212,7 @@ const PerformanceMarketing = ({data}:Props) => {
         />
         <RealBusiness/>
         <Counter/>
-        <Testimonial/>
+        <Testimonial2/>
         <TabsSection 
             tab_content={tab_content1} 
             title='Be in control of your campaigns all the time '
