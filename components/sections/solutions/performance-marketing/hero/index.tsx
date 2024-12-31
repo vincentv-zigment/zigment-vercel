@@ -72,7 +72,7 @@ const ZigmentHero = () => {
                   </span>
                   <span className="hidden lg:inline-block">
                     {`Agentic AI Platform`}
-                    <br className="hiiden lg:block" /> {`Built For Performance Marketings
+                    <br className="hiiden lg:block" /> {`Built For Performance Marketing
 `}
                   </span>
                 </h1>
