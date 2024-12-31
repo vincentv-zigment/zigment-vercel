@@ -8,12 +8,13 @@ import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import { useGSAP } from "@gsap/react";
 
 // shadcn components
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 // components
+import VideoModal from "@/components/tools/video-modal";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import VideoModal from "@/components/tools/video-modal";
+import { FaPlay } from "react-icons/fa6";
 
 const contentArray = [
   {
@@ -51,7 +52,7 @@ const ZigmentHero = () => {
             <div className="max-w-3xl pb-[22px] mx-auto">
               <h2 className="text-[16px]   md:text-[36px] has_fade_anim" >
                 <span className="text-gray-600 lg:text-black text-[16px]   md:text-[28px]">
-                  {`Welcome To Modern Selling`}
+                  {`Welcome To Modern Selling.`}
                 </span>
               </h2>
             </div>
@@ -103,14 +104,21 @@ const ZigmentHero = () => {
                 Talk to us
               </Link>
 
-              <Button
-                onClick={()=>{
-                  setOpenModal(true);
-                }}
-                variant="outline2"
-              >
-                Watch Demo
-              </Button>
+              <div className="flex items-center gap-[10px] cursor-pointer">
+                                <div
+                                  className="w-[50px] md:w-[56px] h-[50px] md:h-[56px] flex justify-center items-center border md:border-[1.5px] border-primary hover:border-theme rounded-full transition-all duration-500 text-primary hover:text-theme"
+                                  onClick={() => {
+                                    setOpenModal(true);
+                                  }}
+                                >
+                                  <FaPlay />
+                                </div>
+                                <p className="text-[16px] font-bold text-primary"                     onClick={() => {
+                                    setOpenModal(true);
+                                  }}>
+                                  Watch Demo
+                                </p>
+                              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px] xl:gap-[30px]">
