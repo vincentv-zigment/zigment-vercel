@@ -57,22 +57,22 @@ const ZigmentHero = () => {
             </div>
             <div className="py-10 lg:pt-0 lg:pb-[20px] has_fade_anim" data-delay="0.30">
               <div className="">
-                <h1 className="text-[45px] md:text-[70px] lg:text-[50px] xl:text-[100px] leading-none font-black relative inline">
+                <h1 className="text-[40px] md:text-[70px] lg:text-[50px] xl:text-[100px] leading-none font-black relative inline">
                   <Image
                     width={60}
                     height={70}
                     src="/assets/imgs/shape/shape-r-2.png"
-                    className="max-w-[21px] md:max-w-[60px] absolute -top-[11px] md:-top-[60px] lg:-top-[285px] -left-[22px] md:-left-[50px] lg:left-[100px] text-xs"
+                    className="max-w-[21px] md:max-w-[60px] absolute -top-[11px] md:-top-[60px] lg:-top-[165px] -left-[22px] md:-left-[50px] lg:left-[80px] text-xs"
                     alt="shape"
                   />
                   <span className="lg:hidden">
-                    {`Agentic AI Platform`}
-                    <br className="hiiden lg:block" /> {` Built For Performance Marketing
+                    {`Agentic AI Built For `}
+                    <br className="hiiden lg:block" /> {` Performance Marketing
 `}
                   </span>
                   <span className="hidden lg:inline-block">
-                    {`Agentic AI Platform`}
-                    <br className="hiiden lg:block" /> {`Built For Performance Marketing
+                    {`Agentic AI Built For `}
+                    <br className="hiiden lg:block" /> {`Performance Marketing
 `}
                   </span>
                 </h1>
