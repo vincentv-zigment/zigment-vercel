@@ -56,14 +56,14 @@ const ConversionFlowSection = () => {
         width={500} 
         height={500} 
         src={'/assets/imgs/lead-gen/hero/lead-gen-hero2.png'} alt="background logo" />
-      <div className="  p-10 md:p-16 rounded-3xl " ref={containerRef}>
-         <div className="grid grid-cols-1 lg:grid-cols-12  md:gap-[30px]  gap-20 p-0 items-center ">
-            <div className="col-span-1 xl:col-span-5 space-y-2 order-1 lg:order-1" style={{color:'black'}}>
-                <p className="text-5xl lg:text-7xl font-bold font-tropiline" style={{color:'black'}}>Fuel Your Conversion Flow</p>
-                <p className="text-lg lg:text-xl text-gray-500" >From first touch to final sale, these capabilities refine and elevate every step of your pipeline.
+      <div className="  p-10 xl:p-16 rounded-3xl " ref={containerRef}>
+         <div className="grid grid-cols-1 lg:grid-cols-12  lg:gap-[30px]  gap-20 p-0 items-center ">
+            <div className="col-span-1 lg:col-span-5 space-y-2 order-1 lg:order-1" style={{color:'black'}}>
+                <p className="text-4xl sm:text-5xl xl:text-7xl font-bold font-tropiline" style={{color:'black'}}>Fuel Your Conversion Flow</p>
+                <p className="text-lg lg:text-md xl:text-xl text-gray-500" >From first touch to final sale, these capabilities refine and elevate every step of your pipeline.
                 </p>
             </div>
-            <div className="col-span-1 xl:col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-6 order-1 lg:order-2">
+            <div className="col-span-1 lg:col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-6 order-1 lg:order-2">
                 {data.map((item, i) => {
                     return (
                         <div key={i} className="space-y-4">

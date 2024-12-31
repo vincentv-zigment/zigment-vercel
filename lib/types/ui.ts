@@ -29,4 +29,5 @@ export enum Marketing_Lead_Source {
   EMAIL_SUBSCRIPTION = 'EMAIL_SUBSCRIPTION',
   SEO_TOOL = 'SEO_TOOL',
   REPORT = 'REPORT',
+  LEAD_GEN = 'LEAD_GEN',
 }

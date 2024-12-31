@@ -1,23 +1,21 @@
-import MetaTagsComponents from '@/components/common/meta-tags-components'
+import MetaTagsComponents from '@/components/common/meta-tags-components';
 import Brand from '@/components/sections/landing-page/brand';
 import EnterpriseGradeAI from '@/components/sections/landing-page/enterprise-grade-AI';
 import GoLive from '@/components/sections/landing-page/go-live';
 import Integration2 from '@/components/sections/landing-page/integration2';
-import LeadConversion from '@/components/sections/landing-page/lead-conversion';
 import RealBusiness from '@/components/sections/landing-page/real-buisness';
 import Testimonial from '@/components/sections/landing-page/testimonial';
 import WorkflowsSection, { workflow_features_type } from '@/components/sections/landing-page/workflows-section';
-import ChatbotFeature, { chatbotfeatureI } from '@/components/sections/solutions/common/chatbot-feature'
+import ChatbotFeature, { chatbotfeatureI } from '@/components/sections/solutions/common/chatbot-feature';
 import LeverageSection from '@/components/sections/solutions/common/leverage-section';
 import SixCards from '@/components/sections/solutions/common/six-cards';
 import TabsSection, { tabContentI } from '@/components/sections/solutions/common/tabs-section';
 import Counter from '@/components/sections/solutions/common/zigment-counter';
 import BlogSection from '@/components/sections/solutions/ctwa/blog-section';
 import PerformanceCounter from '@/components/sections/solutions/performance-marketing/counter';
-import PerformanceHero from '@/components/sections/solutions/performance-marketing/hero'
+import PerformanceHero from '@/components/sections/solutions/performance-marketing/hero';
 import { blogData } from '@/lib/blog/blog-data';
 import { BlogI } from '@/lib/types/blog';
-import React from 'react'
 
 const chatbot_features:chatbotfeatureI[] = [
     {
@@ -193,18 +191,18 @@ const PerformanceMarketing = ({data}:Props) => {
             details={<>{`AI agents integrated with your Ad campaigns start engaging with your  `} <br></br> <span className="block">leads as soon as they enter the funnel</span></>} 
             items={chatbot_features}
         />
-        {/* <LeadConversion/> */}
-        <LeverageSection 
-            title='Leverage the true power of AI Agents' 
-            details='Not meaningfully engaging your leads immediately after they show interest results in lost leads'
-            items={leverage_section_items}
-        />
+        
         <PerformanceCounter 
             title='Focus only on the leads that count'
             details1='Cut tele-calling hours by up to 90%, lowering your team’s costs while maintaining high engagement levels. '
             details2='Focusing on the most qualified leads means that your best sales executives are working on the highest ROI prospects'
             items={benefits}
             image3='/assets/imgs/lead-gen/circle_ain 1.gif'
+        />
+        <LeverageSection 
+            title='Leverage the true power of AI Agents' 
+            details='Not meaningfully engaging your leads immediately after they show interest results in lost leads'
+            items={leverage_section_items}
         />
         <Brand/>
         <SixCards

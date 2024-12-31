@@ -31,16 +31,16 @@ const Hero2LeadGen = () => {
       <div className="   bg-white   md:p-20 rounded-3xl  sec_space1 " ref={containerRef} dir="ltr">
      
 
-        <div className="grid grid-cols-1 lg:grid-cols-12  gap-[20px] md:gap-[30px] lg:gap-20 px-4 md:p-0   bg-white items-center ">
+        <div className="grid grid-cols-1 xl:grid-cols-12  gap-[20px] md:gap-[30px] lg:gap-20 px-4 md:p-0   bg-white items-center ">
                   <div className="col-span-1 xl:col-span-4">
-                    <h2 className="text-[34px] text-center lg:text-left lg:text-[22px] xl:text-[40px] leading-tight has_fade_anim" style={{color:'black'}}>
+                    <h2 className="text-[34px] text-center lg:text-left lg:text-[40px] leading-tight has_fade_anim" style={{color:'black'}}>
                     Deploy everywhere, qualify from anywhere.
                     </h2>
                     <p className="my-[20px] text-[16px] has_fade_anim text-center lg:text-left" style={{color:'black'}}>Qualify leads as soon as they enter your funnel and integrate seamlessly with your CRM. </p>
                     <p className="my-[20px] text-[16px] hidden lg:block has_fade_anim" style={{color:'black'}}>Integrate Zigment seamlessly across all your lead sources to maximize engagement and conversion.</p>
                    
                   </div>
-                  <div className="col-span-1 xl:col-span-8 ">
+                  <div className="col-span-1 lg:col-span-8 ">
                     <Image
                       width={1000}
                       height={1000}

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { BlogI } from "@/lib/types/blog";
-import camelCase from 'camelcase';
 import ScrollProgressBar from "@/components/blocks/landing-page/marketing/common/scroll-progress-bar";
 
 
@@ -39,7 +38,7 @@ const BlogNav = ({data}: Props) => {
         <Link href={'/blog'}>Home</Link> 
         {data && Array.from(new Set(data.map(obj => obj.category_id))).map((x) => {
           return <Link href={`/blog/categories/${x}`} key={`category_key_${x}`}>
-            {camelCase(x, {pascalCase: true})}
+            {x}
           </Link>;
         })}
         

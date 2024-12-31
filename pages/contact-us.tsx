@@ -3,9 +3,11 @@ import MetaTagsComponents from "@/components/common/meta-tags-components";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/useToast";
 import { Marketing_Lead_Source } from "@/lib/types/ui";
+import { personalEmailDomains } from "@/lib/utils";
 import axios from "axios";
 import Link from "next/link";
 import { ChangeEvent, MouseEvent, useState } from "react";
+import validator from "validator";
 
 interface FormDataI {
   fullName: string;
@@ -64,6 +66,19 @@ export default function Example() {
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
       isValid = false;
+    } else {
+      // First check if it's a valid email
+      if (!validator.isEmail(formData.email)) {
+        newErrors.email = "Please enter a valid email";
+        isValid = false;
+      } else {
+        // Then check if it's a personal email domain
+        const domain = formData.email.split("@")[1].toLowerCase();
+        if (personalEmailDomains.includes(domain)) {
+          newErrors.email = "Please use your company email address";
+          isValid = false;
+        }
+      }
     }
 
     if (!formData.companyUrl.trim()) {
@@ -253,7 +268,8 @@ export default function Example() {
               </form>
               {isSubmitted && (
                 <p className="  text-sm mt-4">
-                  Thank you for submitting the form. We will get back to you soon.
+                  Thank you for submitting the form. We will get back to you
+                  soon.
                 </p>
               )}
             </div>

@@ -60,7 +60,7 @@ const Testimonial = () => {
   );
 
   return (
-    <section className="sec_space1">
+    <section className="sec_space_bottom1 md:sec_space1">
       <div className="container" ref={containerRef}>
         <Title1
           text={`Customer Success Stories`}
@@ -80,7 +80,7 @@ const Testimonial = () => {
             {items.map((item, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
                 <div className="p-1">
-                  <Card className="rounded-2xl h-[320px] bg-white">
+                  <Card className="rounded-2xl h-[360px] sm:h-[320px] bg-white">
                     <CardContent className="  p-10">
                       <div className="">
                         <Image

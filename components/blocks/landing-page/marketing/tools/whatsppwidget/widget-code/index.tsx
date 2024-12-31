@@ -137,7 +137,7 @@ const GetWidgetCode = ( ) => {
       </p>
       <p className="text-gray-500 text-sm">
         <strong>Please note:</strong> By clicking &quot;Get Code&quot; you agree to this website&apos;s{" "}
-        <Link href="/privacy-policy" className="text-blue-500 underline">
+        <Link href="/privacy-policy"  id="privacy-policy" className="text-blue-500 underline">
           Privacy Policy
         </Link>
         .

@@ -30,10 +30,13 @@ export async function getServerSideProps() {
   }
 }
 
-export default function Home({}:Props) {
+export default function Home({}: Props) {
   return (
     <>
-      <main className="bg-[#F0F2F4] " style={{width:'100vw', overflowX:'hidden'}} >
+      <main
+        className="bg-[#F0F2F4] "
+        style={{ width: "100vw", overflowX: "hidden" }}
+      >
         <MetaTagsComponents
           title="Zigment | AI Sales Engagement Platform | Boost Conversion by 35%"
           description="Scale your sales with Zigment's AI engagement platform. Automate personalized conversations across web, SMS, email & social channels. Get 12x ROI with AI-powered lead nurturing."
@@ -41,11 +44,11 @@ export default function Home({}:Props) {
           url="https://www.zigment.ai"
         />
         <LeadGenHero />
-        <WhyChooseZigment/>
-        <ConversionFlowSection/>
-        <EnterpriseGradeAI/>
-        <Testimonial/>
-        <Footer/>
+        <WhyChooseZigment />
+        <ConversionFlowSection />
+        <EnterpriseGradeAI />
+        <Testimonial />
+        <Footer />
         {/* <BlogSection data={data.blogs} /> */}
       </main>
     </>

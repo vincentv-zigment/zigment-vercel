@@ -22,6 +22,7 @@ const MainContent = ({ setQrValue }: Props) => {
   return (
     <input
       type="text"
+       id="qr-input"
       className="border-2 focus:border-brand-orange-main outline-none focus:ring-0 p-2 rounded w-full "
       placeholder="Enter URL here"
       value={inputValue}

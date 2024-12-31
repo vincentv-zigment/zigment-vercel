@@ -63,6 +63,7 @@ const ToolsSections = ({data}: Props) => {
                 <div className="mt-6">
                   <Link
                     href={`${tools_data.link}`}
+                    id={`try-now-button-${tools_data.id}`}
                     className="group mx-auto lg:mx-0 inline-flex items-center space-x-2.5 font-semibold   rounded-full hover:bg-primary hover:text-white border border-primary transition duration-200 py-2 px-4 "
                   >
                     <span>Try Now</span>

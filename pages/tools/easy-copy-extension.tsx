@@ -45,6 +45,7 @@ const EasyCopyExtension = () => {
                     width={800}
                     height={800}
                     alt=""
+                     id="zigment-logo"
                     className="w-auto h-[30px] object-contain"
                   />
                 </Link>
@@ -57,6 +58,7 @@ const EasyCopyExtension = () => {
                 router.push("/contact-us?ref=easy-copy-extension-landing-page");
               }}
               size={"sm"}
+               id="buy-pro"
             >
               Buy Pro <ArrowRight />
             </Button>
@@ -82,6 +84,7 @@ const EasyCopyExtension = () => {
                 width={500}
                 height={500}
                 className="w-auto h-24"
+                id="chrome-easy-copy"
                 src="https://cdn.zigment.ai/assets/chrome_available.png"
                 alt=""
               />

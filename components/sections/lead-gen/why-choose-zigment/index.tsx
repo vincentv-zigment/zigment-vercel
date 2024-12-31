@@ -41,12 +41,12 @@ const WhyChooseZigment = () => {
   return (
     <section className=" container   mx-auto rounded-theme p-10 md:sec_space1">
       <div className="  bg-sec_bg p-10 md:p-20 rounded-3xl " ref={containerRef}>
-         <div className="grid grid-cols-1 lg:grid-cols-12  gap-10 md:gap-[30px] lg:gap-20 p-0     items-center ">
-            <div className="col-span-1 xl:col-span-7 space-y-2" style={{color:'black'}}>
-                <p className="text-2xl lg:text-3xl" style={{color:'black'}}>Why Choose</p>
-                <p className="text-7xl lg:text-[120px] font-tropiline" style={{color:'black'}}>Zigment</p>
+         <div className="grid grid-cols-1 lg:grid-cols-12  gap-10 md:gap-[30px] xl:gap-20 p-0     items-center ">
+            <div className="col-span-1 lg:col-span-7 space-y-2" style={{color:'black'}}>
+                <p className="text-2xl  xl:text-3xl" style={{color:'black'}}>Why Choose</p>
+                <p className="text-5xl sm:text-7xl lg:text-8xl xl:text-[120px] font-tropiline" style={{color:'black'}}>Zigment</p>
             </div>
-            <div className="col-span-1 xl:col-span-5 ">
+            <div className="col-span-1 lg:col-span-5 ">
                 {data.map((item, i) => {
                     return (
                         <div key={i} className="mb-10 flex gap-6 items-center">

@@ -70,7 +70,7 @@ const EnterpriseGradeAI = ( ) => {
           text={`Enterprise grade AI`}
           className="w-full mx-auto text-center has_fade_anim"
         />
-              <div className="flex items-center gap-24 mx-auto justify-center mt-10 has_fade_anim">
+              <div className="flex items-center gap-10 sm:gap-24 mx-auto justify-center mt-10 has_fade_anim">
                 {certifiaction_logos.map((logo, i) => {
                   return (
                     <Image alt={logo} width={100} height={100} src={logo} key={i} className="w-12 h-12 md:h-32 md:w-32 inline-block" />
@@ -82,11 +82,11 @@ const EnterpriseGradeAI = ( ) => {
             {items.map((item, i) => (
               <div
                 key={`carousel_item-${i}`}
-                className={`flex-shrink-0 w-full h-[360px] transition-transform duration-500 ${i === currentIndex ? 'block' : 'hidden'}`}
+                className={`flex-shrink-0 w-full h-[400px] sm:h-[360px] transition-transform duration-500 ${i === currentIndex ? 'block' : 'hidden'}`}
               >
-                <div className="p-[25px] lg:p-[45px] bg-white border border-border rounded-theme h-full">
+                <div className="p-[25px] lg:p-[45px] bg-white border border-border rounded-theme    h-full">
                   <div className="flex flex-col justify-center items-center gap-[20px]">
-                    <div className="w-[84px] h-[84px] inline-flex items-center rounded-full justify-center bg-gray-100">
+                    <div className="w-[84px]    h-[84px] inline-flex items-center rounded-full justify-center bg-gray-100">
                       <Image alt={item.title} width={100} height={100} src={item.logo} className="text-primary w-16 h-16 object-fit"/>
                     </div>
                     <div>

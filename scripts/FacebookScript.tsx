@@ -1,10 +1,10 @@
-import Script from 'next/script';
+import Script from "next/script";
 
 function FacebookScript() {
-    return (
-        <>
-            <Script id="fb-pixel-scrips-id">
-                {`
+  return (
+    <>
+      <Script id="fb-pixel-scrips-id-1">
+        {`
         !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -16,13 +16,13 @@ function FacebookScript() {
           fbq('init', '609725497530389');
           fbq('track', 'PageView');
         `}
-            </Script>
-            <Script
-                strategy="lazyOnload"
-                src="https://www.facebook.com/tr?id=609725497530389&ev=PageView&noscript=1"
-            />
-            <Script id="fb-pixel-scrips-id">
-                {`
+      </Script>
+      <Script
+        strategy="lazyOnload"
+        src="https://www.facebook.com/tr?id=609725497530389&ev=PageView&noscript=1"
+      />
+      <Script id="fb-pixel-scrips-id-2">
+        {`
        !function(f,b,e,v,n,t,s)
        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -34,14 +34,13 @@ function FacebookScript() {
        fbq('init', '975691467449345');
        fbq('track', 'PageView');
         `}
-            </Script>
-            <Script
-                strategy="lazyOnload"
-                src="https://www.facebook.com/tr?id=975691467449345&ev=PageView&noscript=1"
-            />
-
-        </>
-    )
+      </Script>
+      <Script
+        strategy="lazyOnload"
+        src="https://www.facebook.com/tr?id=975691467449345&ev=PageView&noscript=1"
+      />
+    </>
+  );
 }
 
-export default FacebookScript
+export default FacebookScript;
