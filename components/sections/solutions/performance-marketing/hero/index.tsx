@@ -18,19 +18,19 @@ import { FaPlay } from "react-icons/fa6";
 
 const contentArray = [
   {
-    title: "Alpha-Intelligence",
-    description: "Drive human-like interactions and workflow actions",
+    title: "Natively AI",
+    description: "A platform built with AI at its core and not just a feature",
     logo: "/assets/imgs/hero/alpha_intelligence.svg",
   },
   {
-    title: "Under 3 Seconds",
-    description: "Instantly engage, nurture and drive sales motion",
-    logo: "/assets/imgs/hero/under_3s.svg",
+    title: "Built For Selling",
+    description: "AI agents trained on the industry-best sales methodologies",
+    logo: "/assets/imgs/performance-marketing/2.png",
   },
   {
-    title: "Everywhere",
-    description: "Engage across all business touchpoints - web, social, sms",
-    logo: "/assets/imgs/hero/everywhere.svg",
+    title: "Fully Managed",
+    description: "Zigment is not just a software. It is human supervised AI  ",
+    logo: "/assets/imgs/performance-marketing/3.png",
   },
 ];
 
@@ -84,13 +84,13 @@ const ZigmentHero = () => {
                 className=" text-[20px]  hidden lg:inline-block  text-primary leading-[1.36] has_fade_anim"
                 data-delay="0.45"
               >
-                {`Engage and nurture your leads instantly to increase ROI from your campaigns by over 30%`}
+                {`Engage, qualify and nurture your leads to increase ROI `} <br/> from your campaigns by over 30%
               </p>
               <p
                 className=" text-[20px]  lg:hidden   text-primary leading-[1.36] has_fade_anim"
                 data-delay="0.45"
               >
-                {`Engage and nurture your leads instantly to increase ROI from your campaigns by over 30%`}
+                {`Engage, qualify and nurture your leads to increase ROI `} <br/> from your campaigns by over 30%
               </p>
             </div>
             <div

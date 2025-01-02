@@ -5,6 +5,26 @@
       "path": "/workflows-of-the-future"
     },
     {
+      "name": "Solutions",
+      "path": "#",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Performance Marketing",
+          "path": "/solutions/performance-marketing"
+        },
+        {
+          "name": "Lead Qualification",
+          "path": "/lp/lead-gen"
+        },
+        {
+          "name": "Whatsapp Marketing",
+          "path": "/solutions/ctwa"
+        }
+        
+      ]
+    },
+    {
       "name": "Resources",
       "path": "#",
       "hasChildren": true,

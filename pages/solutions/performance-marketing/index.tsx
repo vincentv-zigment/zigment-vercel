@@ -131,7 +131,7 @@ const chatbot_features:chatbotfeatureI[] = [
       title: "End User Experience",
       sub_title:
         "AI agents’ behavior trained with your business personality and brand voice",
-      image: "/assets/imgs/workflow-section/z_web_IG-04.png",
+      image: "public/assets/imgs/performance-marketing/2.svg",
     },
     {
       title: "Realtime Dashboard",
@@ -186,6 +186,7 @@ const PerformanceMarketing = ({data}:Props) => {
           url="https://www.zigment.ai"
         />
         <PerformanceHero />
+        <Brand/>
         <ChatbotFeature 
             title='Increase Conversion & Reduce CAC'
             details={<>{`AI agents integrated with your Ad campaigns start engaging with your  `} <br></br> <span className="block">leads as soon as they enter the funnel</span></>} 
@@ -204,7 +205,7 @@ const PerformanceMarketing = ({data}:Props) => {
             details='Not meaningfully engaging your leads immediately after they show interest results in lost leads'
             items={leverage_section_items}
         />
-        <Brand/>
+        
         <SixCards
             title='Zigment is AI-native and built for “selling”'
             details='Zigment brings the truly next-gen AI power to your marketing campaigns'
